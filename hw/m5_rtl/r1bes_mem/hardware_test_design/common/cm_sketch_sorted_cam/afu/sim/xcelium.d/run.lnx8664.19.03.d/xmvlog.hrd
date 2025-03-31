@@ -1,0 +1,25 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-YDIR
+/tools/Xilinx/Vivado/2020.2/data/verilog/src/unisims
+-sv
+-INCDIR
+../header
+-INCDIR
+../ip/axis_data_fifo/hdl
+-DEFINE
+WAVE
+-DEFINE
+SIM
+-DEFINE
+XILINX
+-DEFINE
+W=64
+-DEFINE
+NUM_HASH=4
+-DEFINE
+NUM_ENTRY=25
+-DEFINE
+NUM_INPUT=100

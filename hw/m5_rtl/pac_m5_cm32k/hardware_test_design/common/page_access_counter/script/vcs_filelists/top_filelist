@@ -1,0 +1,16 @@
++systemverilogext+.sv +lint=TFIPC-L +lint=PCWM
+../include/ctrl_signal_types.sv
+../hdl/altera_std_synchronizer_nocut.v
+../hdl/mem_updater.sv
+../hdl/custom_csr.sv
+../hdl/counter_ctrl.sv
+../hdl/my_cust_afu.sv
+../hdl/pac_top.sv
+../hvl/top_tb_components/interface.sv
+../hvl/top_tb_components/transaction_object.sv
+../hvl/top_tb_components/monitor.sv
+../hvl/top_tb_components/driver.sv
+../hvl/top_tb_components/scoreboard.sv
+../hvl/top_tb_components/environment.sv
+../hvl/top_tb_components/test.sv
+../hvl/top_tb_components/pac_top_tb.sv

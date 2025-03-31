@@ -1,0 +1,8 @@
+define XMSIMRC	( /tools/cadence/XCELIUM1903/tools/xcelium/files/xmsimrc, ~/.xmsimrc )
+include ./hdlrun.var
+include ./xllibs/hdl.var
+define SNAPSHOT worklib.glbl:v
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ( + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.tb_afu_top_random:sv

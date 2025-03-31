@@ -1,0 +1,4 @@
++systemverilogext+.sv
+../include/ctrl_signal_types.sv
+../hdl/my_cust_afu.sv
+../hvl/cust_afu_tb.sv

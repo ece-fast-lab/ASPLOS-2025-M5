@@ -1,0 +1,26 @@
+###################################
+## Vivado Native
+###################################
+$XILINX_VIVADO/data/verilog/src/glbl.v
+
+###################################
+## src
+###################################
+
+# CM-sketch
+../src/one_hash_computation.sv
+../src/hash_computation.sv
+../src/min_computation.sv
+../src/sketch.sv
+../src/cm_sketch.sv
+
+# Sorted CAM
+../src/cam.sv
+
+# CM-sketch + Sorted CAM
+../src/cm_sketch_cam_top.sv
+
+###################################
+## testbench
+###################################
+./cm_sketch_cam_tb_random.sv

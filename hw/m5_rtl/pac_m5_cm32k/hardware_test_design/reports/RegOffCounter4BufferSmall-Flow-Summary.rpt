@@ -1,0 +1,57 @@
+Flow Summary report for cxltyp2_ed
+Sun Mar  3 11:54:55 2024
+Quartus Prime Version 23.3.0 Build 104 09/20/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Sun Mar  3 04:39:51 2024      ;
+; Quartus Prime Version           ; 23.3.0 Build 104 09/20/2023 SC Pro Edition ;
+; Revision Name                   ; cxltyp2_ed                                 ;
+; Top-level Entity Name           ; cxltyp2_ed                                 ;
+; Family                          ; Agilex 7                                   ;
+; Device                          ; AGIB027R29A1E2VR3                          ;
+; Timing Models                   ; Preliminary                                ;
+; Power Models                    ; Preliminary                                ;
+; Device Status                   ; Preliminary                                ;
+; Logic utilization (in ALMs)     ; 197,238 / 912,800 ( 22 % )                 ;
+; Total dedicated logic registers ; 385682                                     ;
+; Total pins                      ; 203 / 1,040 ( 20 % )                       ;
+; Total block memory bits         ; 49,362,880 / 271,810,560 ( 18 % )          ;
+; Total RAM Blocks                ; 3,422 / 13,272 ( 26 % )                    ;
+; Total DSP Blocks                ; 0 / 8,528 ( 0 % )                          ;
+; Total HSSI HPS                  ; 0 / 1 ( 0 % )                              ;
+; Total HSSI R-Tiles              ; 1 / 3 ( 33 % )                             ;
+; Total PLLs                      ; 4 / 36 ( 11 % )                            ;
++---------------------------------+--------------------------------------------+
+
+

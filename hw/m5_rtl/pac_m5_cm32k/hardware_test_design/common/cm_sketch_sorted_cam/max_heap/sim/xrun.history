@@ -1,0 +1,2 @@
+s1(09May2024:20:45:30):  xrun -f xrun_arg -define WAVE -define SIM -define XILINX 
+s2(14May2024:00:21:29):  xrun -f xrun_arg -define WAVE -define SIM -define XILINX 

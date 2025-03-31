@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="intelclkctrl_0"
+ megafunction_name="INTELCLKCTRL"
+ intended_family="Agilex 7"
+ specifies="all_ports">
+ <global>
+  <pin name="inclk" direction="input" scope="external" />
+  <pin name="clock_div1x" direction="output" scope="external" />
+  <pin name="clock_div2x" direction="output" scope="external" />
+  <pin name="clock_div4x" direction="output" scope="external" />
+ </global>
+</pinplan>

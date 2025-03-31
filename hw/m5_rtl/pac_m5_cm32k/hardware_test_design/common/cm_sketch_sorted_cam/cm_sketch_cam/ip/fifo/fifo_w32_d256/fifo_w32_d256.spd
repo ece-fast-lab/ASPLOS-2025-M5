@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="fifo_1923/sim/fifo_w32_d256_fifo_1923_rmok3kq.v"
+   type="VERILOG"
+   library="fifo_1923" />
+ <file
+   path="sim/fifo_w32_d256.v"
+   type="VERILOG"
+   library="fifo_w32_d256"
+   hasInlineConfiguration="true" />
+ <topLevel name="fifo_w32_d256.fifo_w32_d256" />
+ <deviceFamily name="agilex7" />
+ <device name="AGIB027R29A1E2VB" />
+</simPackage>

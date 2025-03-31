@@ -1,0 +1,251 @@
+# (C) 2001-2023 Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions and other 
+# software and tools, and its AMPP partner logic functions, and any output 
+# files from any of the foregoing (including device programming or simulation 
+# files), and any associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License Subscription 
+# Agreement, Intel FPGA IP License Agreement, or other applicable 
+# license agreement, including, without limitation, that your use is for the 
+# sole purpose of programming logic devices manufactured by Intel and sold by 
+# Intel or its authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+
+set_global_assignment -name TOP_LEVEL_ENTITY cxltyp2_ed
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.3
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "02:50:54  JUNE 02, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.3.0 Pro Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name FAMILY "Agilex 7"
+set_global_assignment -name DEVICE AGIB027R29A1E2VR3
+set_global_assignment -name FLOW_DISABLE_ASSEMBLER OFF
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 24
+set_global_assignment -name GENERATE_COMPRESSED_SOF ON
+
+set_global_assignment -name VID_OPERATION_MODE "PMBUS MASTER"
+set_global_assignment -name PWRMGT_BUS_SPEED_MODE "100 KHZ"
+set_global_assignment -name USE_CONF_DONE SDM_IO16
+set_global_assignment -name USE_PWRMGT_SCL SDM_IO0
+set_global_assignment -name USE_PWRMGT_SDA SDM_IO12
+set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
+
+set_global_assignment -name PWRMGT_SLAVE_DEVICE_TYPE OTHER
+set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-13"
+
+set_global_assignment -name PWRMGT_SLAVE_DEVICE0_ADDRESS 47
+set_global_assignment -name PWRMGT_SLAVE_DEVICE1_ADDRESS 00
+set_global_assignment -name PWRMGT_SLAVE_DEVICE2_ADDRESS 00
+set_global_assignment -name PWRMGT_SLAVE_DEVICE3_ADDRESS 00
+set_global_assignment -name PWRMGT_SLAVE_DEVICE4_ADDRESS 00
+set_global_assignment -name PWRMGT_SLAVE_DEVICE5_ADDRESS 00
+set_global_assignment -name PWRMGT_SLAVE_DEVICE6_ADDRESS 00
+set_global_assignment -name PWRMGT_SLAVE_DEVICE7_ADDRESS 00
+set_global_assignment -name PWRMGT_DIRECT_FORMAT_COEFFICIENT_M 1
+set_global_assignment -name PWRMGT_TRANSLATED_VOLTAGE_VALUE_UNIT VOLTS
+set_global_assignment -name PWRMGT_PAGE_COMMAND_ENABLE OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "AVST X8"
+set_global_assignment -name MINIMUM_SEU_INTERVAL 10000
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_115MHZ_IOSC
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+
+source ./constraints/cxltyp2_quartus_constraints_ed_en.tcl
+
+
+
+
+source ./constraints/qsf_device_pinout.tcl
+
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/sampling_tracker.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/sampling_tracker_top.sv
+set_global_assignment -name IP_FILE IP/bram/w32_d1024.ip
+set_global_assignment -name IP_FILE IP/bram/w64_d8192.ip
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/h_cache_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/h_pfn_buffer.sv
+set_global_assignment -name IP_FILE common/BRAM/port_1_ram.ip
+set_global_assignment -name IP_FILE common/cm_sketch_sorted_cam/afu_banking/ip/fifo/fifo_w32_d256.ip
+set_global_assignment -name IP_FILE common/cdc_fifos/fifo_28w_16d.ip
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/axis_data_fifo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/cam.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/cm_sketch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/hash_computation.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/hot_tracker.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/hot_tracker_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/m5_ctrl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/min_computation.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/one_hash_computation.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/query_ctrl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/sketch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/cm_sketch_sorted_cam/afu_banking/src/sketch_unit.sv
+set_global_assignment -name IP_FILE common/buf_512w_16384d.ip
+set_global_assignment -name SYSTEMVERILOG_FILE common/cdc/bus_synchronizer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/ofw_buf_afu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/mc_ecc_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/mc_channel_adapter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/mc_cxlmem_ready_control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/mc_rmw_shim.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/mc_ecc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/mc_emif.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/mc_devmem_top.sv
+set_global_assignment -name IP_FILE ./common/cdc_fifos/fifo_12b_128w_show_ahead.ip
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/axi2avmm_bridge.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/include/ctrl_signal_types.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/my_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/mem_updater.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/mem_request_arbiter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/priority_arbiter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/roundrobin_arbiter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/pac_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/custom_csr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/csr_updater.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/csr_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/page_access_counter/hdl/counter_ctrl.sv
+
+
+
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/mc_top/mc_top.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/ex_default_csr/ex_default_csr_avmm_slave.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/ex_default_csr/ex_default_csr_top.sv
+
+set_global_assignment -name IP_FILE ./common/cdc_fifos/cfg_to_iosf_fifo_vcd_ED.ip 
+set_global_assignment -name IP_FILE ./common/cdc_fifos/iosf_to_cfg_fifo_vcd_ED.ip 
+
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_cxl_pio_parameters.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_avalon_sc_fifo_1931_vhmcgqy.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_avalon_st_pipeline_stage_1920_zterisq.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_burst_adapter_1922_tsepz7q.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_burst_adapter_altera_avalon_st_pipeline_stage_1922_pev47ty.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_demultiplexer_1921_s5kn7vi.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_master_agent_191_mpbm6tq.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_master_translator_191_g7h47bq.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_multiplexer_1921_5zcdh2i.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_multiplexer_1921_zxmqgaq.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_router_1921_6kkcoeq.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_router_1921_sv2vwxi.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_slave_agent_191_ncfkfri.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_merlin_slave_translator_191_x56fcki.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_altera_mm_interconnect_1920_sx2feoa.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_MEM0.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_MEM0_altera_avalon_onchip_memory2_1932_vi4l4uq.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_reset_sync.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_std_synchronizer_nocut.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_bam_v2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_bam_v2_avmm_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_bam_v2_avst_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_bam_v2_cpl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_bam_v2_fifos.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_bam_v2_rw.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_bam_v2_sch_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_cxl_pio.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_cxl_aer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_cxl_bam_v2_crdt_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_cxl_default_config.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_cxl_pf_checker.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_pcie_bam_v2_hwtcl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed_pio0.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/pcie_ed.v
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_cxl_pio_ed_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cxl_pio/intel_cxl_tx_crdt_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_pld_if.svh.iv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_ss_fifo_vcd.v 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_ss_rx_core_fifos.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_ss_rx_crd_check.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_ss_rx_crd_lmt.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_ss_rx_crd_type.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_ss_rx_data_fifos.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_ss_rx_hdr_data_fifos.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/avst4to1_ss_tlp_hdr_decode.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/cxl_ed_avst_4to1_rx_side.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/avst4to1_rx/ed_define.svh.iv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/axi_to_avst/axi_avst_if_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/axi_to_avst/axi_to_avst_bridge.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/axi_to_avst/intel_cxl_afu_cache_io_demux.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/axi_to_avst/intel_cxl_afu_pio_mux.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/axi_to_avst/intel_cxl_tx_tlp_fifos.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_csr0_reg_macros.vh.iv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/ccv_afu_reg_macros.vh.iv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/ccv_afu_globals.vh.iv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cust_afu/cust_afu_wrapper.sv 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/tmp_cafu_csr0_cfg_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_csr0_cfg_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_csr0_cfg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_mem_target_pkg.sv 	
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/ccv_afu_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/ccv_afu_alg1a_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_ram_1r1w.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_ram_1r1w_be.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/ccv_afu_cdc_fifo_vcd.v 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/fifo_sync_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/pattern_expand_by_byte_mask.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/pattern_expand_by_byte_mask_ver2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/pattern_reduce_by_pattern_size.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/verify_sc_compare.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/verify_sc_extract_error_pattern.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/verify_sc_index_byte_offset.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_calc_error_address.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_execute_write_axi_fsm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_execute_write.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_execute_response_count.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_verify_sc_read_axi_fsm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_verify_sc_read.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_verify_sc_response.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_top_level_fsm_sc_only.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/alg_1a_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/mwae_afu_status_regs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/mwae_config_and_cxl_errors_reg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/mwae_config_check.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/mwae_debug_logs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/mwae_error_injection_regs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/mwae_poison_injection.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/mwae_top_level_fsm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/mwae_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_csr_doe.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_mem_target.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_devreg_mailbox_elog.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_devreg_mailbox.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_reg_router.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/ccv_afu_csr_avmm_slave.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/ccv_afu_cdc_fifo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_csr0_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_csr0_iosf_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/cafu_csr0/cafu_csr0_avmm_wrapper.sv
+ 
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/afu/afu_csr_avmm_slave.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ./common/afu/afu_top.sv
+
+
+set_global_assignment -name IP_FILE ./common/mc_top/altecc_enc_dec_ip/altecc_enc_latency0.ip
+set_global_assignment -name IP_FILE ./common/mc_top/altecc_enc_dec_ip/altecc_dec_latency1.ip
+set_global_assignment -name IP_FILE ./common/mc_top/altecc_enc_dec_ip/altecc_dec_latency2.ip
+set_global_assignment -name IP_FILE ./common/mc_top/emif_ip/emif_cal_one_ch.ip
+set_global_assignment -name IP_FILE ./common/mc_top/emif_ip/emif.ip
+set_global_assignment -name IP_FILE ./common/mc_top/sip_quartus_ips/rspfifo_IP/rspfifo.ip
+set_global_assignment -name IP_FILE ./common/mc_top/sip_quartus_ips/reqfifo_IP/reqfifo.ip
+
+set_global_assignment -name QSYS_FILE common/intel_reset_release/intel_reset_release.ip    
+set_global_assignment -name SEARCH_PATH ./common/
+set_global_assignment -name SEARCH_PATH ./common/avst4to1_rx/
+set_global_assignment -name SEARCH_PATH ./common/axi_to_avst/
+set_global_assignment -name SEARCH_PATH ./common/cafu_csr0/
+set_global_assignment -name SEARCH_PATH ./../intel_rtile_cxl_top_cxltyp2_ed
+set_global_assignment -name SEARCH_PATH ./../intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1100/synth
+
+set_global_assignment -name QSYS_FILE ./../intel_rtile_cxl_top_cxltyp2_ed.ip
+set_global_assignment -name SYSTEMVERILOG_FILE ed_top_wrapper_typ2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE cxltyp2_ed.sv
+set_global_assignment -name SDC_FILE ./constraints/cxltyp2_ed.sdc
+
+
+set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
+set_global_assignment -name BOARD default
+set_global_assignment -name IP_FILE common/buf_512w_65536d.ip
+set_global_assignment -name IP_FILE common/signalTap_updateLogic.ip
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp_default.stp
+set_global_assignment -name SIGNALTAP_FILE stp_default.stp
+set_global_assignment -name PRESERVE_FOR_DEBUG_ENABLE ON
+set_global_assignment -name SIGNALTAP_FILE demo_stp.stp
+set_global_assignment -name IP_FILE common/buf_512w_131072d.ip
+set_global_assignment -name IP_FILE common/fifo_pac_overflow.ip
+set_global_assignment -name NUMBER_OF_TOP_ROOT_CAUSES_REPORTED 100
+set_global_assignment -name RTL_ANALYSIS_DEBUG_MODE ON

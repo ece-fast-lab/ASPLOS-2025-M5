@@ -1,0 +1,9 @@
+	component pll_0 is
+		port (
+			inclk       : in  std_logic := 'X'; -- clk
+			clock_div1x : out std_logic;        -- clk
+			clock_div2x : out std_logic;        -- clk
+			clock_div4x : out std_logic         -- clk
+		);
+	end component pll_0;
+

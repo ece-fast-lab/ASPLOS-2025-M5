@@ -1,0 +1,18 @@
+# system info fifo_w32_d256 on 2024.03.09.16:56:29
+system_info:
+name,value
+DEVICE,AGIB027R29A1E2VB
+DEVICE_FAMILY,Agilex 7
+GENERATION_ID,0
+#
+#
+# Files generated for fifo_w32_d256 on 2024.03.09.16:56:29
+files:
+filepath,kind,attributes,module,is_top
+sim/fifo_w32_d256.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,fifo_w32_d256,true
+fifo_1923/sim/fifo_w32_d256_fifo_1923_rmok3kq.v,VERILOG,,fifo_w32_d256_fifo_1923_rmok3kq,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+fifo_w32_d256.fifo_0,fifo_w32_d256_fifo_1923_rmok3kq

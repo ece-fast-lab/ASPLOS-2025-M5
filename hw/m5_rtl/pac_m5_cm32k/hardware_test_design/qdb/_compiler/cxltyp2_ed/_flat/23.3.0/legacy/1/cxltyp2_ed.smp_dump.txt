@@ -1,0 +1,599 @@
+
+State Machine - Summary
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_avst_merger_top_inst|cxl_io_avst_merger_ch0|state
+Name state.FIFO_DRAIN state.USR_PENDING state.USR_PATH state.IDLE 
+state.IDLE 0 0 0 0 
+state.USR_PATH 0 0 1 1 
+state.USR_PENDING 0 1 0 1 
+state.FIFO_DRAIN 1 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_avst_merger_top_inst|cxl_io_avst_merger_ch1|state
+Name state.FIFO_DRAIN state.USR_PENDING state.USR_PATH state.IDLE 
+state.IDLE 0 0 0 0 
+state.USR_PATH 0 0 1 1 
+state.USR_PENDING 0 1 0 1 
+state.FIFO_DRAIN 1 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_avst_merger_top_inst|cxl_io_avst_merger_ch2|state
+Name state.FIFO_DRAIN state.USR_PENDING state.USR_PATH state.IDLE 
+state.IDLE 0 0 0 0 
+state.USR_PATH 0 0 1 1 
+state.USR_PENDING 0 1 0 1 
+state.FIFO_DRAIN 1 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_avst_merger_top_inst|cxl_io_avst_merger_ch3|state
+Name state.FIFO_DRAIN state.USR_PENDING state.USR_PATH state.IDLE 
+state.IDLE 0 0 0 0 
+state.USR_PATH 0 0 1 1 
+state.USR_PENDING 0 1 0 1 
+state.FIFO_DRAIN 1 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_EMIF[0].emif_inst|emif|arch|arch_inst|local_reset_inst|non_hps.state
+Name non_hps.state.WAIT_USER_RESET_REQ_2ND_DEASSERT non_hps.state.WAIT_USER_RESET_REQ_ASSERT non_hps.state.WAIT_USER_RESET_REQ_1ST_DEASSERT non_hps.state.WAIT_RESET_DONE non_hps.state.ASSERT_CORE2SEQ_RESET_REQ 
+non_hps.state.WAIT_RESET_DONE 0 0 0 0 0 
+non_hps.state.WAIT_USER_RESET_REQ_1ST_DEASSERT 0 0 1 1 0 
+non_hps.state.WAIT_USER_RESET_REQ_ASSERT 0 1 0 1 0 
+non_hps.state.WAIT_USER_RESET_REQ_2ND_DEASSERT 1 0 0 1 0 
+non_hps.state.ASSERT_CORE2SEQ_RESET_REQ 0 0 0 1 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|fme|u_bbs_bfe|bfe_rstp_sm_cur_state
+Name bfe_rstp_sm_cur_state.BFE_RSTP_SM_SEND_CACHEFLUSHED bfe_rstp_sm_cur_state.BFE_RSTP_SM_FLUSH_HOSTCACHE bfe_rstp_sm_cur_state.BFE_RSTP_SM_WAIT_AFU_STOP2 bfe_rstp_sm_cur_state.BFE_RSTP_SM_FLUSH_DEVCACHE bfe_rstp_sm_cur_state.BFE_RSTP_SM_WAIT_AFU_STOP1 bfe_rstp_sm_cur_state.BFE_RSTP_SM_WAIT_CAM bfe_rstp_sm_cur_state.BFE_RSTP_SM_IDLE 
+bfe_rstp_sm_cur_state.BFE_RSTP_SM_IDLE 0 0 0 0 0 0 0 
+bfe_rstp_sm_cur_state.BFE_RSTP_SM_WAIT_CAM 0 0 0 0 0 1 1 
+bfe_rstp_sm_cur_state.BFE_RSTP_SM_WAIT_AFU_STOP1 0 0 0 0 1 0 1 
+bfe_rstp_sm_cur_state.BFE_RSTP_SM_FLUSH_DEVCACHE 0 0 0 1 0 0 1 
+bfe_rstp_sm_cur_state.BFE_RSTP_SM_WAIT_AFU_STOP2 0 0 1 0 0 0 1 
+bfe_rstp_sm_cur_state.BFE_RSTP_SM_FLUSH_HOSTCACHE 0 1 0 0 0 0 1 
+bfe_rstp_sm_cur_state.BFE_RSTP_SM_SEND_CACHEFLUSHED 1 0 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|fme|u_bbs_bfe|bfe_gpf_sm_cur_state
+Name bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_P2_REQ bfe_gpf_sm_cur_state.BFE_GPF_SM_P1_ACK bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_AFU_STOP2 bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_P2_ACK bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_P1_ACK bfe_gpf_sm_cur_state.BFE_GPF_SM_FLUSH_HOSTDIRTY bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_AFU_STOP1 bfe_gpf_sm_cur_state.BFE_GPF_SM_IDLE bfe_gpf_sm_cur_state.BFE_GPF_SM_P2_ACK 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_IDLE 0 0 0 0 0 0 0 0 0 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_AFU_STOP1 0 0 0 0 0 0 1 1 0 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_FLUSH_HOSTDIRTY 0 0 0 0 0 1 0 1 0 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_P1_ACK 0 0 0 0 1 0 0 1 0 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_P2_ACK 0 0 0 1 0 0 0 1 0 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_AFU_STOP2 0 0 1 0 0 0 0 1 0 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_P1_ACK 0 1 0 0 0 0 0 1 0 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_WAIT_P2_REQ 1 0 0 0 0 0 0 1 0 
+bfe_gpf_sm_cur_state.BFE_GPF_SM_P2_ACK 0 0 0 0 0 0 0 1 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|fme|u_bbs_bfe|bfe_cxlr_sm_cur_state
+Name bfe_cxlr_sm_cur_state.BFE_CXLR_SM_SEND_CACHEFLUSHED bfe_cxlr_sm_cur_state.BFE_CXLR_SM_FLUSH_HOSTCACHE bfe_cxlr_sm_cur_state.BFE_CXLR_SM_FLUSH_DEVCACHE bfe_cxlr_sm_cur_state.BFE_CXLR_SM_IDLE bfe_cxlr_sm_cur_state.BFE_CXLR_SM_DONE 
+bfe_cxlr_sm_cur_state.BFE_CXLR_SM_IDLE 0 0 0 0 0 
+bfe_cxlr_sm_cur_state.BFE_CXLR_SM_FLUSH_DEVCACHE 0 0 1 1 0 
+bfe_cxlr_sm_cur_state.BFE_CXLR_SM_FLUSH_HOSTCACHE 0 1 0 1 0 
+bfe_cxlr_sm_cur_state.BFE_CXLR_SM_SEND_CACHEFLUSHED 1 0 0 1 0 
+bfe_cxlr_sm_cur_state.BFE_CXLR_SM_DONE 0 0 0 1 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|fme|u_bbs_bfe|bfe_cm_sm_cur_state
+Name bfe_cm_sm_cur_state.BFE_CM_SM_DONE bfe_cm_sm_cur_state.BFE_CM_SM_SEND_CACHEFLUSHED bfe_cm_sm_cur_state.BFE_CM_SM_FLUSH_HOSTCACHE bfe_cm_sm_cur_state.BFE_CM_SM_FLUSH_DEVCACHE bfe_cm_sm_cur_state.BFE_CM_SM_WAIT_CREQREQ_FIFO_EMPTY bfe_cm_sm_cur_state.BFE_CM_SM_IDLE 
+bfe_cm_sm_cur_state.BFE_CM_SM_IDLE 0 0 0 0 0 0 
+bfe_cm_sm_cur_state.BFE_CM_SM_WAIT_CREQREQ_FIFO_EMPTY 0 0 0 0 1 1 
+bfe_cm_sm_cur_state.BFE_CM_SM_FLUSH_DEVCACHE 0 0 0 1 0 1 
+bfe_cm_sm_cur_state.BFE_CM_SM_FLUSH_HOSTCACHE 0 0 1 0 0 1 
+bfe_cm_sm_cur_state.BFE_CM_SM_SEND_CACHEFLUSHED 0 1 0 0 0 1 
+bfe_cm_sm_cur_state.BFE_CM_SM_DONE 1 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|fme|u_bbs_bfe|bfe_creqif_sm_cur_state
+Name bfe_creqif_sm_cur_state.BFE_CREQIF_SM_WAIT_DONE 
+bfe_creqif_sm_cur_state.BFE_CREQIF_SM_IDLE 0 
+bfe_creqif_sm_cur_state.BFE_CREQIF_SM_WAIT_DONE 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip|u_rtile_mdx1|u_rnr_cxl_soft_wrapper|u_rnr_cxl_soft_rx_tx_wrapper|p0_csb2wire_inst|csb_ep_inst|csbendpoint|sbebase|sbcport|gen_legacy_ism.sbcgcgu|curr_state
+Name curr_state.CI_SM_IDLE curr_state.CI_SM_DONE curr_state.CI_SM_HOLD 
+curr_state.CI_SM_IDLE 0 0 0 
+curr_state.CI_SM_DONE 1 1 0 
+curr_state.CI_SM_HOLD 1 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].bbs_slice_wrap|bbs_slice|bbs_perfmon_slice|latency_d2h_fsm
+Name latency_d2h_fsm.LATENCY_D2H_DONE latency_d2h_fsm.LATENCY_D2H_CNT latency_d2h_fsm.LATENCY_D2H_WAIT latency_d2h_fsm.LATENCY_D2H_IDLE 
+latency_d2h_fsm.LATENCY_D2H_IDLE 0 0 0 0 
+latency_d2h_fsm.LATENCY_D2H_WAIT 0 0 1 1 
+latency_d2h_fsm.LATENCY_D2H_CNT 0 1 0 1 
+latency_d2h_fsm.LATENCY_D2H_DONE 1 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].bbs_slice_wrap|bbs_slice|ial_top|ingress|H2DRspFifo|fifovsm
+Name fifovsm.FIFOVSM_LPROC 
+fifovsm.FIFOVSM_IDLE 0 
+fifovsm.FIFOVSM_LPROC 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].bbs_slice_wrap|bbs_slice|ial_top|ingress|H2DReqFifo|fifovsm
+Name fifovsm.FIFOVSM_LPROC 
+fifovsm.FIFOVSM_IDLE 0 
+fifovsm.FIFOVSM_LPROC 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].bbs_slice_wrap|bbs_slice|ial_top|ingress|H2DHFifo|fifovsm
+Name fifovsm.FIFOVSM_LPROC 
+fifovsm.FIFOVSM_IDLE 0 
+fifovsm.FIFOVSM_LPROC 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].bbs_slice_wrap|bbs_slice|ial_top|ingress|H2DDATAFifo|fifovsm
+Name fifovsm.FIFOVSM_LPROC 
+fifovsm.FIFOVSM_IDLE 0 
+fifovsm.FIFOVSM_LPROC 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].bbs_slice_wrap|bbs_slice|ial_top|ingress|type1_disabled2.M2SReqFifo|fifovsm
+Name fifovsm.FIFOVSM_LPROC 
+fifovsm.FIFOVSM_IDLE 0 
+fifovsm.FIFOVSM_LPROC 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].bbs_slice_wrap|bbs_slice|ial_top|ingress|type1_disabled3.M2SRwDFifo|fifovsm
+Name fifovsm.FIFOVSM_LPROC 
+fifovsm.FIFOVSM_IDLE 0 
+fifovsm.FIFOVSM_LPROC 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].bbs_slice_wrap|bbs_slice|ial_top|ingress|type1_disabled4.M2SDATAFifo|fifovsm
+Name fifovsm.FIFOVSM_LPROC 
+fifovsm.FIFOVSM_IDLE 0 
+fifovsm.FIFOVSM_LPROC 1 
+
+State Machine - ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|state
+Name state.READ state.READ_GRAY_2 state.READ_GRAY state.WRITE state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.WRITE 0 0 0 1 1 
+state.READ_GRAY 0 0 1 0 1 
+state.READ_GRAY_2 0 1 0 0 1 
+state.READ 1 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|afu_top_inst|cache_hot_tracker_top|next_state
+Name next_state.STATE_ARADDR 
+next_state.STATE_IDLE 0 
+next_state.STATE_ARADDR 1 
+
+State Machine - ed_top_wrapper_typ2_inst|afu_top_inst|cache_hot_tracker_top|state
+Name state.STATE_ARADDR 
+state.STATE_IDLE 0 
+state.STATE_ARADDR 1 
+
+State Machine - ed_top_wrapper_typ2_inst|afu_top_inst|page_hot_tracker_top|next_state
+Name next_state.STATE_ARADDR 
+next_state.STATE_IDLE 0 
+next_state.STATE_ARADDR 1 
+
+State Machine - ed_top_wrapper_typ2_inst|afu_top_inst|page_hot_tracker_top|state
+Name state.STATE_ARADDR 
+state.STATE_IDLE 0 
+state.STATE_ARADDR 1 
+
+State Machine - ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|state
+Name state.S_WRESP state.S_WDATA state.S_WADDR state.S_IDLE 
+state.S_IDLE 0 0 0 0 
+state.S_WADDR 0 0 1 1 
+state.S_WDATA 0 1 0 1 
+state.S_WRESP 1 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|afu_top_inst|page_hot_tracker_top|u_hot_tracker|cm_sketch_0|state
+Name state.STATE_FLUSH_4 state.STATE_FLUSH_3 state.STATE_FLUSH_2 state.STATE_REQ_2 state.STATE_FLUSH_1 state.STATE_REQ_1 state.STATE_IDLE 
+state.STATE_IDLE 0 0 0 0 0 0 0 
+state.STATE_REQ_1 0 0 0 0 0 1 1 
+state.STATE_FLUSH_1 0 0 0 0 1 0 1 
+state.STATE_REQ_2 0 0 0 1 0 0 1 
+state.STATE_FLUSH_2 0 0 1 0 0 0 1 
+state.STATE_FLUSH_3 0 1 0 0 0 0 1 
+state.STATE_FLUSH_4 1 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|afu_top_inst|page_hot_tracker_top|u_hot_tracker|cam_0|state
+Name state.STATE_FLUSH state.STATE_MISS state.STATE_HIT state.STATE_REQ state.STATE_MIG state.STATE_IDLE 
+state.STATE_IDLE 0 0 0 0 0 0 
+state.STATE_MIG 0 0 0 0 1 1 
+state.STATE_REQ 0 0 0 1 0 1 
+state.STATE_HIT 0 0 1 0 0 1 
+state.STATE_MISS 0 1 0 0 0 1 
+state.STATE_FLUSH 1 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|u_axi2cci_shim0|flush_state
+Name flush_state.SHIM_CLEAR_FLUSH flush_state.SHIM_ISSUE_FLUSH flush_state.SHIM_TEEUP_FLUSH flush_state.SHIM_FENCE_FLUSH flush_state.SHIM_STALL_FLUSH flush_state.SHIM_IDLE 
+flush_state.SHIM_IDLE 0 0 0 0 0 0 
+flush_state.SHIM_STALL_FLUSH 0 0 0 0 1 1 
+flush_state.SHIM_FENCE_FLUSH 0 0 0 1 0 1 
+flush_state.SHIM_TEEUP_FLUSH 0 0 1 0 0 1 
+flush_state.SHIM_ISSUE_FLUSH 0 1 0 0 0 1 
+flush_state.SHIM_CLEAR_FLUSH 1 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|u_axi2cci_shim1|flush_state
+Name flush_state.SHIM_CLEAR_FLUSH flush_state.SHIM_ISSUE_FLUSH flush_state.SHIM_TEEUP_FLUSH flush_state.SHIM_FENCE_FLUSH flush_state.SHIM_STALL_FLUSH flush_state.SHIM_IDLE 
+flush_state.SHIM_IDLE 0 0 0 0 0 0 
+flush_state.SHIM_STALL_FLUSH 0 0 0 0 1 1 
+flush_state.SHIM_FENCE_FLUSH 0 0 0 1 0 1 
+flush_state.SHIM_TEEUP_FLUSH 0 0 1 0 0 1 
+flush_state.SHIM_ISSUE_FLUSH 0 1 0 0 0 1 
+flush_state.SHIM_CLEAR_FLUSH 1 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|u_axi2cci_arb|state
+Name state.ARB_FENCE_FLUSH state.ARB_ISSUE_FLUSH state.ARB_STALL_FLUSH state.ARB_IDLE 
+state.ARB_IDLE 0 0 0 0 
+state.ARB_STALL_FLUSH 0 0 1 1 
+state.ARB_ISSUE_FLUSH 0 1 0 1 
+state.ARB_FENCE_FLUSH 1 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip|u_rtile_mdx1|u_rnr_cxl_soft_wrapper|rnr_cxl_reset_ctrl_inst|cur_state
+Name cur_state.WARM_RST cur_state.WARM_RST_RDY cur_state.RELEASE_WARM_RDY cur_state.WARM_RST_REQ cur_state.PLD_IN_USE cur_state.WARM_RST_ENTRY cur_state.PLD_RDY cur_state.BTI_WAIT cur_state.REQ_LOCK cur_state.RELEASE_AIB_RST cur_state.RESET_AIB cur_state.INIT_RESET_ENTRY 
+cur_state.INIT_RESET_ENTRY 0 0 0 0 0 0 0 0 0 0 0 0 
+cur_state.RESET_AIB 0 0 0 0 0 0 0 0 0 0 1 1 
+cur_state.RELEASE_AIB_RST 0 0 0 0 0 0 0 0 0 1 0 1 
+cur_state.REQ_LOCK 0 0 0 0 0 0 0 0 1 0 0 1 
+cur_state.BTI_WAIT 0 0 0 0 0 0 0 1 0 0 0 1 
+cur_state.PLD_RDY 0 0 0 0 0 0 1 0 0 0 0 1 
+cur_state.WARM_RST_ENTRY 0 0 0 0 0 1 0 0 0 0 0 1 
+cur_state.PLD_IN_USE 0 0 0 0 1 0 0 0 0 0 0 1 
+cur_state.WARM_RST_REQ 0 0 0 1 0 0 0 0 0 0 0 1 
+cur_state.RELEASE_WARM_RDY 0 0 1 0 0 0 0 0 0 0 0 1 
+cur_state.WARM_RST_RDY 0 1 0 0 0 0 0 0 0 0 0 1 
+cur_state.WARM_RST 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].inst_devmem_ooo_resps|inst_devmem_requests|aw_req_state
+Name aw_req_state.AW_IDLE aw_req_state.AW_AWREADY aw_req_state.AW_WREADY 
+aw_req_state.AW_IDLE 0 0 0 
+aw_req_state.AW_WREADY 1 0 1 
+aw_req_state.AW_AWREADY 1 1 0 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|GenBBSSlice[0].inst_devmem_ooo_resps|inst_devmem_requests|ar_req_state
+Name ar_req_state.AR_VALIDS 
+ar_req_state.AR_IDLE 0 
+ar_req_state.AR_VALIDS 1 
+
+State Machine - ed_top_wrapper_typ2_inst|csr_updater_inst|state
+Name state.UPDATE 
+state.IDLE 0 
+state.UPDATE 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb_cores[0].cmb_core_inst|cmb_avmm_master_inst|state
+Name state.IDLE state.CMPL state.READ_WAIT state.READ state.WRITE 
+state.IDLE 0 0 0 0 0 
+state.WRITE 1 0 0 0 1 
+state.READ 1 0 0 1 0 
+state.CMPL 1 1 0 0 0 
+state.READ_WAIT 1 0 1 0 0 
+
+State Machine - ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.pio|bam_rw|wr_state
+Name wr_state.WR_CMD_XTRA wr_state.WR_DATA_XTRA wr_state.WR_DATA wr_state.WR_IDLE 
+wr_state.WR_IDLE 0 0 0 0 
+wr_state.WR_DATA 0 0 1 1 
+wr_state.WR_DATA_XTRA 0 1 0 1 
+wr_state.WR_CMD_XTRA 1 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.pio|bam_rw|rd_state
+Name rd_state.RD_TYPE_2_2 rd_state.RD_TYPE_2_1 rd_state.RD_TYPE_2_0 rd_state.RD_TYPE_2_1_PIPE rd_state.RD_TYPE_1 rd_state.RD_DECODE rd_state.RD_IDLE 
+rd_state.RD_IDLE 0 0 0 0 0 0 0 
+rd_state.RD_DECODE 0 0 0 0 0 1 1 
+rd_state.RD_TYPE_1 0 0 0 0 1 0 1 
+rd_state.RD_TYPE_2_1_PIPE 0 0 0 1 0 0 1 
+rd_state.RD_TYPE_2_0 0 0 1 0 0 0 1 
+rd_state.RD_TYPE_2_1 0 1 0 0 0 0 1 
+rd_state.RD_TYPE_2_2 1 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.pio|bam_avmm_intf|rxm_state
+Name rxm_state.RXM_RD rxm_state.RXM_WR rxm_state.RXM_POP_CMD rxm_state.RXM_IDLE 
+rxm_state.RXM_IDLE 0 0 0 0 
+rxm_state.RXM_POP_CMD 0 0 1 1 
+rxm_state.RXM_WR 0 1 0 1 
+rxm_state.RXM_RD 1 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.mm_interconnect_0|mem0_s1_burst_adapter|altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - ed_top_wrapper_typ2_inst|intel_cxl_aer_inst|state
+Name state.110 state.101 state.100 state.011 state.010 state.001 state.000 state.111 
+state.111 0 0 0 0 0 0 0 0 
+state.000 0 0 0 0 0 0 1 1 
+state.001 0 0 0 0 0 1 0 1 
+state.010 0 0 0 0 1 0 0 1 
+state.011 0 0 0 1 0 0 0 1 
+state.100 0 0 1 0 0 0 0 1 
+state.101 0 1 0 0 0 0 0 1 
+state.110 1 0 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|inst_cxl_tx_crdt_intf|crdt_state
+Name crdt_state.TX_CRDT_INIT_CAP 
+crdt_state.CRDT_IDLE 0 
+crdt_state.TX_CRDT_INIT_CAP 1 
+
+State Machine - ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|wr_tlp_state
+Name wr_tlp_state.1011 wr_tlp_state.1010 wr_tlp_state.1001 wr_tlp_state.1000 wr_tlp_state.0111 wr_tlp_state.0110 wr_tlp_state.0101 wr_tlp_state.0100 wr_tlp_state.0011 wr_tlp_state.0010 wr_tlp_state.0001 wr_tlp_state.0000 wr_tlp_state.1111 
+wr_tlp_state.1111 0 0 0 0 0 0 0 0 0 0 0 0 0 
+wr_tlp_state.0000 0 0 0 0 0 0 0 0 0 0 0 1 1 
+wr_tlp_state.0001 0 0 0 0 0 0 0 0 0 0 1 0 1 
+wr_tlp_state.0010 0 0 0 0 0 0 0 0 0 1 0 0 1 
+wr_tlp_state.0011 0 0 0 0 0 0 0 0 1 0 0 0 1 
+wr_tlp_state.0100 0 0 0 0 0 0 0 1 0 0 0 0 1 
+wr_tlp_state.0101 0 0 0 0 0 0 1 0 0 0 0 0 1 
+wr_tlp_state.0110 0 0 0 0 0 1 0 0 0 0 0 0 1 
+wr_tlp_state.0111 0 0 0 0 1 0 0 0 0 0 0 0 1 
+wr_tlp_state.1000 0 0 0 1 0 0 0 0 0 0 0 0 1 
+wr_tlp_state.1001 0 0 1 0 0 0 0 0 0 0 0 0 1 
+wr_tlp_state.1010 0 1 0 0 0 0 0 0 0 0 0 0 1 
+wr_tlp_state.1011 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|inst_poison_injection|state
+Name state.WAIT_START_LOW state.CLEAR_BUSY state.CHECK_FOR_WVALID state.IDLE 
+state.IDLE 0 0 0 0 
+state.CHECK_FOR_WVALID 0 0 1 1 
+state.CLEAR_BUSY 0 1 0 1 
+state.WAIT_START_LOW 1 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|inst_debug_log_regs|state
+Name state.COMPLETE state.WAIT state.SEND state.OTHER1 state.RECORD state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.RECORD 0 0 0 0 1 1 
+state.OTHER1 0 0 0 1 0 1 
+state.SEND 0 0 1 0 0 1 
+state.WAIT 0 1 0 0 0 1 
+state.COMPLETE 1 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|inst_mwae_top_fsm|state
+Name state.ALG_1A_COMPLETE state.ALG_1A_WAIT state.ALG_1A_START state.AWAIT_ALG_ZERO state.CONFIG_FAIL state.ALG_SELECT state.CHECK_CONFIG state.SET_BUSY state.LOCK_CONFIG state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 
+state.LOCK_CONFIG 0 0 0 0 0 0 0 0 1 1 
+state.SET_BUSY 0 0 0 0 0 0 0 1 0 1 
+state.CHECK_CONFIG 0 0 0 0 0 0 1 0 0 1 
+state.ALG_SELECT 0 0 0 0 0 1 0 0 0 1 
+state.CONFIG_FAIL 0 0 0 0 1 0 0 0 0 1 
+state.AWAIT_ALG_ZERO 0 0 0 1 0 0 0 0 0 1 
+state.ALG_1A_START 0 0 1 0 0 0 0 0 0 1 
+state.ALG_1A_WAIT 0 1 0 0 0 0 0 0 0 1 
+state.ALG_1A_COMPLETE 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_reset_ctrl|CXL_RESET_ps
+Name CXL_RESET_ps.CXL_RESET_ERROR CXL_RESET_ps.CXL_RESET_COMPLETE CXL_RESET_ps.CXL_RESET_CCL_ACK_WAIT CXL_RESET_ps.CXL_RESET_BBS_ACK_WAIT CXL_RESET_ps.CXL_RESET_BBS_COMPLETE_CLEAR CXL_RESET_ps.CXL_RESET_BBS_INIT CXL_RESET_ps.CXL_RESET_USR_ACK_LOW_WAIT CXL_RESET_ps.CXL_RESET_USR_ACK_WAIT CXL_RESET_ps.CXL_RESET_INIT CXL_RESET_ps.CXL_RESET_IDLE 
+CXL_RESET_ps.CXL_RESET_IDLE 0 0 0 0 0 0 0 0 0 0 
+CXL_RESET_ps.CXL_RESET_INIT 0 0 0 0 0 0 0 0 1 1 
+CXL_RESET_ps.CXL_RESET_USR_ACK_WAIT 0 0 0 0 0 0 0 1 0 1 
+CXL_RESET_ps.CXL_RESET_USR_ACK_LOW_WAIT 0 0 0 0 0 0 1 0 0 1 
+CXL_RESET_ps.CXL_RESET_BBS_INIT 0 0 0 0 0 1 0 0 0 1 
+CXL_RESET_ps.CXL_RESET_BBS_COMPLETE_CLEAR 0 0 0 0 1 0 0 0 0 1 
+CXL_RESET_ps.CXL_RESET_BBS_ACK_WAIT 0 0 0 1 0 0 0 0 0 1 
+CXL_RESET_ps.CXL_RESET_CCL_ACK_WAIT 0 0 1 0 0 0 0 0 0 1 
+CXL_RESET_ps.CXL_RESET_COMPLETE 0 1 0 0 0 0 0 0 0 1 
+CXL_RESET_ps.CXL_RESET_ERROR 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|gen_alg_1a_top.inst_alg_1a_top|inst_alg_1a_top_fsm|state
+Name state.LOOP_COUNT_CHECK state.CHECK_IF_ERROR state.VERIFY_WAIT state.SET_COUNT_CHECK state.DISABLE_STARTED state.INCR_SET state.EXECUTE_WAIT state.VERIFY_START state.EXECUTE_START state.INIT state.COMPLETE state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state.COMPLETE 0 0 0 0 0 0 0 0 0 0 1 1 
+state.INIT 0 0 0 0 0 0 0 0 0 1 0 1 
+state.EXECUTE_START 0 0 0 0 0 0 0 0 1 0 0 1 
+state.VERIFY_START 0 0 0 0 0 0 0 1 0 0 0 1 
+state.EXECUTE_WAIT 0 0 0 0 0 0 1 0 0 0 0 1 
+state.INCR_SET 0 0 0 0 0 1 0 0 0 0 0 1 
+state.DISABLE_STARTED 0 0 0 0 1 0 0 0 0 0 0 1 
+state.SET_COUNT_CHECK 0 0 0 1 0 0 0 0 0 0 0 1 
+state.VERIFY_WAIT 0 0 1 0 0 0 0 0 0 0 0 1 
+state.CHECK_IF_ERROR 0 1 0 0 0 0 0 0 0 0 0 1 
+state.LOOP_COUNT_CHECK 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|gen_alg_1a_top.inst_alg_1a_top|inst_alg1a_execute_write|state
+Name state.WAIT_ON_RESPONSES state.WAIT_ON_N state.START_N state.IDLE state.COMPLETE 
+state.IDLE 0 0 0 0 0 
+state.COMPLETE 0 0 0 1 1 
+state.START_N 0 0 1 1 0 
+state.WAIT_ON_N 0 1 0 1 0 
+state.WAIT_ON_RESPONSES 1 0 0 1 0 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|gen_alg_1a_top.inst_alg_1a_top|inst_alg1a_execute_response|state
+Name state.CHECK_COUNT_2 state.AWAIT_RSP state.AWAIT_REQ state.CHECK_COUNT state.START state.COMPLETE state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 
+state.COMPLETE 0 0 0 0 0 1 1 
+state.START 0 0 0 0 1 0 1 
+state.CHECK_COUNT 0 0 0 1 0 0 1 
+state.AWAIT_REQ 0 0 1 0 0 0 1 
+state.AWAIT_RSP 0 1 0 0 0 0 1 
+state.CHECK_COUNT_2 1 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|gen_alg_1a_top.inst_alg_1a_top|inst_alg1a_verify_sc_read|state
+Name state.WAIT_ON_RESPONSES state.WAIT_ON_N state.START state.IDLE state.COMPLETE 
+state.IDLE 0 0 0 0 0 
+state.COMPLETE 0 0 0 1 1 
+state.START 0 0 1 1 0 
+state.WAIT_ON_N 0 1 0 1 0 
+state.WAIT_ON_RESPONSES 1 0 0 1 0 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|gen_alg_1a_top.inst_alg_1a_top|inst_alg_1a_verify_sc_response|state
+Name state.CHECK_COUNT_2 state.AWAIT_RSP state.RECORD_ERROR state.COLLECT_ERROR_2 state.COLLECT_ERROR_1 state.START_ERROR state.AWAIT_REQ state.CHECK_COUNT state.START state.COMPLETE state.PRECOMPLETE state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state.PRECOMPLETE 0 0 0 0 0 0 0 0 0 0 1 1 
+state.COMPLETE 0 0 0 0 0 0 0 0 0 1 0 1 
+state.START 0 0 0 0 0 0 0 0 1 0 0 1 
+state.CHECK_COUNT 0 0 0 0 0 0 0 1 0 0 0 1 
+state.AWAIT_REQ 0 0 0 0 0 0 1 0 0 0 0 1 
+state.START_ERROR 0 0 0 0 0 1 0 0 0 0 0 1 
+state.COLLECT_ERROR_1 0 0 0 0 1 0 0 0 0 0 0 1 
+state.COLLECT_ERROR_2 0 0 0 1 0 0 0 0 0 0 0 1 
+state.RECORD_ERROR 0 0 1 0 0 0 0 0 0 0 0 1 
+state.AWAIT_RSP 0 1 0 0 0 0 0 0 0 0 0 1 
+state.CHECK_COUNT_2 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|gen_alg_1a_top.inst_alg_1a_top|inst_alg1a_execute_write|inst_alg1a_exe_wr_axi_fsm|axi_state
+Name axi_state.CHECK_FIFO axi_state.WAIT_VERIFY axi_state.WAIT_AWREADY axi_state.NEXT_AWREADY axi_state.LAST_AWREADY axi_state.FIRST_AWREADY axi_state.SEND_AXI axi_state.FIRST_AWVALID axi_state.FIRST_POP axi_state.FIRST_WAIT axi_state.WAIT_TIL_NOT_EMPTY axi_state.IDLE 
+axi_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+axi_state.WAIT_TIL_NOT_EMPTY 0 0 0 0 0 0 0 0 0 0 1 1 
+axi_state.FIRST_WAIT 0 0 0 0 0 0 0 0 0 1 0 1 
+axi_state.FIRST_POP 0 0 0 0 0 0 0 0 1 0 0 1 
+axi_state.FIRST_AWVALID 0 0 0 0 0 0 0 1 0 0 0 1 
+axi_state.SEND_AXI 0 0 0 0 0 0 1 0 0 0 0 1 
+axi_state.FIRST_AWREADY 0 0 0 0 0 1 0 0 0 0 0 1 
+axi_state.LAST_AWREADY 0 0 0 0 1 0 0 0 0 0 0 1 
+axi_state.NEXT_AWREADY 0 0 0 1 0 0 0 0 0 0 0 1 
+axi_state.WAIT_AWREADY 0 0 1 0 0 0 0 0 0 0 0 1 
+axi_state.WAIT_VERIFY 0 1 0 0 0 0 0 0 0 0 0 1 
+axi_state.CHECK_FIFO 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|gen_alg_1a_top.inst_alg_1a_top|inst_alg1a_verify_sc_read|inst_verify_sc_axi_fsm|state
+Name state.CHECK_FIFO state.WAIT_VERIFY state.WAIT_AWREADY state.NEXT_ARREADY state.LAST_ARREADY state.FIRST_ARREADY state.SEND_AXI state.FIRST_ARVALID state.FIRST_POP state.FIRST_WAIT state.WAIT_NOT_EMPTY state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state.WAIT_NOT_EMPTY 0 0 0 0 0 0 0 0 0 0 1 1 
+state.FIRST_WAIT 0 0 0 0 0 0 0 0 0 1 0 1 
+state.FIRST_POP 0 0 0 0 0 0 0 0 1 0 0 1 
+state.FIRST_ARVALID 0 0 0 0 0 0 0 1 0 0 0 1 
+state.SEND_AXI 0 0 0 0 0 0 1 0 0 0 0 1 
+state.FIRST_ARREADY 0 0 0 0 0 1 0 0 0 0 0 1 
+state.LAST_ARREADY 0 0 0 0 1 0 0 0 0 0 0 1 
+state.NEXT_ARREADY 0 0 0 1 0 0 0 0 0 0 0 1 
+state.WAIT_AWREADY 0 0 1 0 0 0 0 0 0 0 0 1 
+state.WAIT_VERIFY 0 1 0 0 0 0 0 0 0 0 0 1 
+state.CHECK_FIFO 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|inst_mwae_top|gen_alg_1a_top.inst_alg_1a_top|inst_alg_1a_verify_sc_response|inst_calc_error_address|state
+Name state.WAIT_FOR_CLEAR state.COMPLETE state.ADD_X state.ADD_RAI state.START state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.START 0 0 0 0 1 1 
+state.ADD_RAI 0 0 0 1 0 1 
+state.ADD_X 0 0 1 0 0 1 
+state.COMPLETE 0 1 0 0 0 1 
+state.WAIT_FOR_CLEAR 1 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|user2ip_error_intf_cdc_bridge_inst|HDR_SENT_ps
+Name HDR_SENT_ps.HDR_DW5 HDR_SENT_ps.HDR_DW4 HDR_SENT_ps.HDR_DW3 HDR_SENT_ps.HDR_DW2 HDR_SENT_ps.HDR_DW1 HDR_SENT_ps.HDR_IDLE 
+HDR_SENT_ps.HDR_IDLE 0 0 0 0 0 0 
+HDR_SENT_ps.HDR_DW1 0 0 0 0 1 1 
+HDR_SENT_ps.HDR_DW2 0 0 0 1 0 1 
+HDR_SENT_ps.HDR_DW3 0 0 1 0 0 1 
+HDR_SENT_ps.HDR_DW4 0 1 0 0 0 1 
+HDR_SENT_ps.HDR_DW5 1 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|error_intf_arbiter_inst|state
+Name state.IDLE state.FWD_USR_ERR_DATA state.FWD_HIP_ERR_DATA state.READ 
+state.IDLE 0 0 0 0 
+state.READ 1 0 0 1 
+state.FWD_HIP_ERR_DATA 1 0 1 0 
+state.FWD_USR_ERR_DATA 1 1 0 0 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|csb2wire_cdc_bridge_inst|HDR_SENT_ps
+Name HDR_SENT_ps.HDR_DW5 HDR_SENT_ps.HDR_DW4 HDR_SENT_ps.HDR_DW3 HDR_SENT_ps.HDR_DW2 HDR_SENT_ps.HDR_DW1 HDR_SENT_ps.HDR_IDLE 
+HDR_SENT_ps.HDR_IDLE 0 0 0 0 0 0 
+HDR_SENT_ps.HDR_DW1 0 0 0 0 1 1 
+HDR_SENT_ps.HDR_DW2 0 0 0 1 0 1 
+HDR_SENT_ps.HDR_DW3 0 0 1 0 0 1 
+HDR_SENT_ps.HDR_DW4 0 1 0 0 0 1 
+HDR_SENT_ps.HDR_DW5 1 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip|u_rtile_mdx1|u_rnr_cxl_soft_wrapper|u_rnr_cxl_soft_rx_tx_wrapper|u_rnr_cxl_soft_rx_wrapper|rx_aib_deskew_0_23|dsk_sm|state
+Name state.ST_DESKEW_DONE state.ST_DESKEW_ERROR state.ST_RETRY state.ST_WAIT_FOR_DONE state.ST_CLEAR_FOR_RETRY state.ST_FINISH_DESKEW state.ST_BOND state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 0 0 
+state.ST_BOND 0 0 0 0 0 0 1 1 
+state.ST_FINISH_DESKEW 0 0 0 0 0 1 0 1 
+state.ST_CLEAR_FOR_RETRY 0 0 0 0 1 0 0 1 
+state.ST_WAIT_FOR_DONE 0 0 0 1 0 0 0 1 
+state.ST_RETRY 0 0 1 0 0 0 0 1 
+state.ST_DESKEW_ERROR 0 1 0 0 0 0 0 1 
+state.ST_DESKEW_DONE 1 0 0 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip|u_rtile_mdx1|u_rnr_cxl_soft_wrapper|u_rnr_cxl_soft_rx_tx_wrapper|p0_csb2wire_inst|csb_ep_inst|csbendpoint|sbebase|i_sbcasyncclkreq_side_clk|fsm
+Name fsm.WAIT_ACK_ST fsm.HYST_ST fsm.ACTIVE_ST fsm.RESET_ST fsm.GATED_ST 
+fsm.RESET_ST 0 0 0 0 0 
+fsm.ACTIVE_ST 0 0 1 1 0 
+fsm.HYST_ST 0 1 0 1 0 
+fsm.WAIT_ACK_ST 1 0 0 1 0 
+fsm.GATED_ST 0 0 0 1 1 
+
+State Machine - ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|ccv_afu_csr_avmm_slave_inst|state
+Name state.IDLE state.ACK state.REQ 
+state.IDLE 0 0 0 
+state.ACK 1 1 0 
+state.REQ 1 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|bbs|bbs|fme|bbs_avmm_slave_inst|state
+Name state.IDLE state.ACK state.REQ 
+state.IDLE 0 0 0 
+state.ACK 1 1 0 
+state.REQ 1 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip|u_rtile_mdx1|u_rnr_cxl_soft_wrapper|u_rnr_cxl_soft_rx_tx_wrapper|p0_csb2wire_inst|u_intel_rtile_cxl_hiperr2csb|state
+Name state.Prefx state.Hdr_4 state.Hdr_3 state.Hdr_2 state.Hdr_1 state.Idle 
+state.Idle 0 0 0 0 0 0 
+state.Hdr_1 0 0 0 0 1 1 
+state.Hdr_2 0 0 0 1 0 1 
+state.Hdr_3 0 0 1 0 0 1 
+state.Hdr_4 0 1 0 0 0 1 
+state.Prefx 1 0 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|custom_sb_top|custom_PM_handler|custom_PM_controller|PMREQ_FSM_ps
+Name PMREQ_FSM_ps.PMREQ_RSP_WAIT PMREQ_FSM_ps.PMREQ_RSP_RCVD PMREQ_FSM_ps.PMREQ_REQ PMREQ_FSM_ps.PMREQ_GO PMREQ_FSM_ps.PMREQ_IDLE 
+PMREQ_FSM_ps.PMREQ_IDLE 0 0 0 0 0 
+PMREQ_FSM_ps.PMREQ_GO 0 0 0 1 1 
+PMREQ_FSM_ps.PMREQ_REQ 0 0 1 0 1 
+PMREQ_FSM_ps.PMREQ_RSP_RCVD 0 1 0 0 1 
+PMREQ_FSM_ps.PMREQ_RSP_WAIT 1 0 0 0 1 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|custom_sb_top|custom_PM_handler|custom_PM_controller|CDT_PM_INIT_FSM_ps
+Name CDT_PM_INIT_FSM_ps.AGT_INFO_RCVD CDT_PM_INIT_FSM_ps.CDT_MSG_RCVD CDT_PM_INIT_FSM_ps.AGT_INFO_POLL CDT_PM_INIT_FSM_ps.CDT_RSP_SENT CDT_PM_INIT_FSM_ps.AGT_INFO_DELAY CDT_PM_INIT_FSM_ps.CDT_DELAY CDT_PM_INIT_FSM_ps.CDT_INIT_RESTORE_POLL CDT_PM_INIT_FSM_ps.AGT_INFO_RSP_SENT 
+CDT_PM_INIT_FSM_ps.CDT_INIT_RESTORE_POLL 0 0 0 0 0 0 0 0 
+CDT_PM_INIT_FSM_ps.CDT_DELAY 0 0 0 0 0 1 1 0 
+CDT_PM_INIT_FSM_ps.AGT_INFO_DELAY 0 0 0 0 1 0 1 0 
+CDT_PM_INIT_FSM_ps.CDT_RSP_SENT 0 0 0 1 0 0 1 0 
+CDT_PM_INIT_FSM_ps.AGT_INFO_POLL 0 0 1 0 0 0 1 0 
+CDT_PM_INIT_FSM_ps.AGT_INFO_RSP_SENT 0 0 0 0 0 0 1 1 
+CDT_PM_INIT_FSM_ps.CDT_MSG_RCVD 0 1 0 0 0 0 1 0 
+CDT_PM_INIT_FSM_ps.AGT_INFO_RCVD 1 0 0 0 0 0 1 0 
+
+State Machine - intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|custom_sb_top|custom_PM_handler|custom_PM_controller|PMRST_FSM_ps
+Name PMRST_FSM_ps.PMRST_EXT_TRG PMRST_FSM_ps.PMRST_DELAY_ACK PMRST_FSM_ps.PMRST_ACK_AUTO PMRST_FSM_ps.PMRST_EXT_ACK PMRST_FSM_ps.PMRST_MSG_POLL 
+PMRST_FSM_ps.PMRST_MSG_POLL 0 0 0 0 0 
+PMRST_FSM_ps.PMRST_EXT_ACK 0 0 0 1 1 
+PMRST_FSM_ps.PMRST_ACK_AUTO 0 0 1 0 1 
+PMRST_FSM_ps.PMRST_DELAY_ACK 0 1 0 0 1 
+PMRST_FSM_ps.PMRST_EXT_TRG 1 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|counter_ctrl_inst|state
+Name state.ZERO_OUT_COUNTER_S state.WRITE_BACK_COUNTER_S state.COUNTING_S state.IDLE_S 
+state.IDLE_S 0 0 0 0 
+state.COUNTING_S 0 0 1 1 
+state.WRITE_BACK_COUNTER_S 0 1 0 1 
+state.ZERO_OUT_COUNTER_S 1 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|state_r
+Name state_r.COPY_TO_DRAM_DUMP state_r.COPY_TO_DRAM_FETCH_DONE state_r.COPY_TO_DRAM_FETCH state_r.COPY_TO_DRAM_INIT state_r.DONE state_r.ZERO_OUT_WR state_r.ZERO_OUT_INIT state_r.IDLE 
+state_r.IDLE 0 0 0 0 0 0 0 0 
+state_r.ZERO_OUT_INIT 0 0 0 0 0 0 1 1 
+state_r.ZERO_OUT_WR 0 0 0 0 0 1 0 1 
+state_r.DONE 0 0 0 0 1 0 0 1 
+state_r.COPY_TO_DRAM_INIT 0 0 0 1 0 0 0 1 
+state_r.COPY_TO_DRAM_FETCH 0 0 1 0 0 0 0 1 
+state_r.COPY_TO_DRAM_FETCH_DONE 0 1 0 0 0 0 0 1 
+state_r.COPY_TO_DRAM_DUMP 1 0 0 0 0 0 0 1 
+
+State Machine - ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_EMIF[0].emif_inst|emif|arch|arch_inst|cal_counter_inst|non_hps.counter_state
+Name non_hps.counter_state.COUNT_CAL non_hps.counter_state.IDLE non_hps.counter_state.STOP non_hps.counter_state.INIT 
+non_hps.counter_state.INIT 0 0 0 0 
+non_hps.counter_state.STOP 0 0 1 1 
+non_hps.counter_state.IDLE 0 1 0 1 
+non_hps.counter_state.COUNT_CAL 1 0 0 1 
+
+State Machine - Summary
+
+State Machine - auto_fab_0|alt_sld_fab_0|alt_sld_fab_0|host_link_jtag|jtag|normal.jtag_dc_streaming|jtag_streaming|read_state
+Name read_state.ST_HEADER read_state.ST_READ_DATA read_state.ST_PADDED 
+read_state.ST_HEADER 0 0 0 
+read_state.ST_READ_DATA 1 1 0 
+read_state.ST_PADDED 1 0 1 
+
+State Machine - auto_fab_0|alt_sld_fab_0|alt_sld_fab_0|host_link_jtag|jtag|normal.jtag_dc_streaming|jtag_streaming|write_state
+Name write_state.ST_WRITE_DATA write_state.ST_HEADER_2 write_state.ST_HEADER_1 write_state.ST_BYPASS 
+write_state.ST_BYPASS 0 0 0 0 
+write_state.ST_HEADER_1 0 0 1 1 
+write_state.ST_HEADER_2 0 1 0 1 
+write_state.ST_WRITE_DATA 1 0 0 1 
+
+State Machine - auto_fab_0|alt_sld_fab_0|alt_sld_fab_0|memfabric|transacto|p2m|state
+Name state.READ_SEND_WAIT state.READ_DATA_WAIT state.READ_SEND_ISSUE state.READ_CMD_WAIT state.WRITE_WAIT state.RETURN_PACKET state.READ_ASSERT state.GET_WRITE_DATA state.GET_ADDR4 state.GET_ADDR3 state.GET_ADDR2 state.GET_ADDR1 state.GET_SIZE2 state.GET_SIZE1 state.GET_EXTRA state.READY 
+state.READY 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.GET_EXTRA 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.GET_SIZE1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.GET_SIZE2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.GET_ADDR1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.GET_ADDR2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.GET_ADDR3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.GET_ADDR4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.GET_WRITE_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.READ_ASSERT 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.RETURN_PACKET 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.WRITE_WAIT 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_CMD_WAIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_ISSUE 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_DATA_WAIT 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,2 @@
+s1(23May2024:01:57:31):  xrun -f xrun_arg -define WAVE -define SIM -define XILINX +define+W=64 +define+NUM_HASH=4 +define+NUM_ENTRY=25 +define+NUM_INPUT=100 
+s2(23May2024:02:00:30):  xrun -f xrun_arg -define WAVE -define SIM -define XILINX +define+W=64 +define+NUM_HASH=4 +define+NUM_ENTRY=25 +define+NUM_INPUT=100 

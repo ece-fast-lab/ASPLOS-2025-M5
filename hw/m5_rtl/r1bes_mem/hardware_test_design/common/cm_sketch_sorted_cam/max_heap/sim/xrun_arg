@@ -1,0 +1,33 @@
+
+-access rwc
+-64
+-smartorder 
+-SV
+-v93
+-licqueue
+-ALLOWREDEFINITION
+-relax
+
+-namemap_mixgen +DISABLEGENCHK
+# -clean
+# -INCDIR .. \
+
+
+## source
+-incdir ../header 
+# -incdir ../src 
+# -incdir /share/quarter_sim_lib 
+
+
+## +define+rnrb_one_lib_CXL_TOP_OFF
+
+
+-top heap_tb_random
+
+-f filelist
+
+
+-incdir ../ip/axis_data_fifo/hdl
+-y $XILINX_VIVADO/data/verilog/src/unisims
+-cdslib /home/jhpark/workspace/vivado/compile_simlib/cds_unisims_ver.lib
+-top glbl

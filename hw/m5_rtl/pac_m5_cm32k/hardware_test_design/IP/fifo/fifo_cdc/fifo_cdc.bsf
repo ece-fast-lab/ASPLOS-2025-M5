@@ -1,0 +1,108 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 232 216)
+	(text "fifo_cdc" (rect 93 0 126 12)(font "SansSerif" (font_size 11)))
+	(text "inst" (rect 8 200 20 212)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "data[7..0]" (rect 0 0 36 12)(font "SansSerif" (font_size 8)))
+		(text "data[7..0]" (rect 4 65 64 76)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "wrreq" (rect 0 0 22 12)(font "SansSerif" (font_size 8)))
+		(text "wrreq" (rect 4 90 34 101)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "rdreq" (rect 0 0 21 12)(font "SansSerif" (font_size 8)))
+		(text "rdreq" (rect 4 115 34 126)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "wrclk" (rect 0 0 20 12)(font "SansSerif" (font_size 8)))
+		(text "wrclk" (rect 4 140 34 151)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "rdclk" (rect 0 0 18 12)(font "SansSerif" (font_size 8)))
+		(text "rdclk" (rect 4 165 34 176)(font "SansSerif" (font_size 8)))
+		(line (pt 0 176)(pt 68 176)(line_width 1))
+	)
+	(port
+		(pt 232 72)
+		(output)
+		(text "q[7..0]" (rect 0 0 24 12)(font "SansSerif" (font_size 8)))
+		(text "q[7..0]" (rect 206 65 248 76)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "rdempty" (rect 0 0 34 12)(font "SansSerif" (font_size 8)))
+		(text "rdempty" (rect 197 90 239 101)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 232 120)
+		(output)
+		(text "wrfull" (rect 0 0 20 12)(font "SansSerif" (font_size 8)))
+		(text "wrfull" (rect 207 115 243 126)(font "SansSerif" (font_size 8)))
+	)
+	(drawing
+		(text "fifo_input" (rect 13 46 86 105)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "datain" (rect 73 71 182 152)(font "SansSerif" (color 0 0 0)))
+		(text "wrreq" (rect 73 96 176 202)(font "SansSerif" (color 0 0 0)))
+		(text "rdreq" (rect 73 121 176 252)(font "SansSerif" (color 0 0 0)))
+		(text "wrclk" (rect 73 146 176 302)(font "SansSerif" (color 0 0 0)))
+		(text "rdclk" (rect 73 171 176 352)(font "SansSerif" (color 0 0 0)))
+		(text "fifo_output" (rect 154 46 374 105)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "dataout" (rect 119 71 280 152)(font "SansSerif" (color 0 0 0)))
+		(text "rdempty" (rect 114 96 270 202)(font "SansSerif" (color 0 0 0)))
+		(text "wrfull" (rect 127 121 290 252)(font "SansSerif" (color 0 0 0)))
+		(text " fifo_cdc " (rect 199 201 458 412)(font "SansSerif" ))
+		(line (pt 68 34)(pt 153 34)(line_width 1))
+		(line (pt 153 34)(pt 153 201)(line_width 1))
+		(line (pt 68 201)(pt 153 201)(line_width 1))
+		(line (pt 68 34)(pt 68 201)(line_width 1))
+		(line (pt 0 76)(pt 68 76)(line_width 3))
+		(line (pt 0 101)(pt 68 101)(line_width 1))
+		(line (pt 0 126)(pt 68 126)(line_width 1))
+		(line (pt 0 151)(pt 68 151)(line_width 1))
+		(line (pt 69 55)(pt 69 180)(line_width 1))
+		(line (pt 70 55)(pt 70 180)(line_width 1))
+		(line (pt 238 76)(pt 153 76)(line_width 3))
+		(line (pt 238 101)(pt 153 101)(line_width 1))
+		(line (pt 238 126)(pt 153 126)(line_width 1))
+		(line (pt 152 55)(pt 152 130)(line_width 1))
+		(line (pt 151 55)(pt 151 130)(line_width 1))
+		(line (pt 0 0)(pt 238 0)(line_width 1))
+		(line (pt 238 0)(pt 238 218)(line_width 1))
+		(line (pt 0 218)(pt 238 218)(line_width 1))
+		(line (pt 0 0)(pt 0 218)(line_width 1))
+	)
+)

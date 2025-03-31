@@ -1,0 +1,76 @@
+###################################
+## Vivado Native
+###################################
+$XILINX_VIVADO/data/verilog/src/glbl.v
+
+###################################
+## package
+###################################
+../header/clst_pkg.sv
+../header/afu_axi_if_pkg.sv
+../header/cxlip_top_pkg.sv
+../header/mc_axi_if_pkg.sv
+
+###################################
+## axis fifo (xilinx)
+###################################
+../ip/axis_data_fifo/sim/axis_data_fifo_0.v
+../ip/axis_data_fifo/hdl/axis_data_fifo_v2_0_vl_rfs.v
+../ip/axis_data_fifo/hdl/axis_infrastructure_v1_1_vl_rfs.v
+
+###################################
+## fifo (intel)
+###################################
+../ip/fifo/fifo_w32_d256/sim/fifo_w32_d256.v
+../ip/fifo/fifo_w32_d256/fifo_1923/sim/fifo_w32_d256_fifo_1923_rmok3kq.v
+
+###################
+# intel sim_lib
+###################
+# /share/quarter_sim_lib/220model.v 
+# /share/quarter_sim_lib/sgate.v 
+# /share/quarter_sim_lib/altera_primitives.v 
+# /share/quarter_sim_lib/altera_mf.v 
+# /share/quarter_sim_lib/altera_lnsim.sv 
+# /share/quarter_sim_lib/tennm_atoms.sv 
+# /share/quarter_sim_lib/tennm_atoms_ncrypt.sv 
+# /share/quarter_sim_lib/fmica_atoms_ncrypt.sv 
+# # /share/quarter_sim_lib/simsf_dpi.cpp 
+# /share/quarter_sim_lib/libdpi.so
+# /share/quarter_sim_lib/tennm_hssi_atoms.sv 
+# /share/quarter_sim_lib/tennm_hssi_atoms_ncrypt.sv 
+# /share/quarter_sim_lib/ctfb_hssi_atoms.sv
+# /share/quarter_sim_lib/ctfb_hssi_atoms_ncrypt.sv
+# /share/quarter_sim_lib/ctfb_hssi_atoms2_ncrypt.sv
+# /share/quarter_sim_lib/ctr_hssi_atoms.sv 
+# /share/quarter_sim_lib/ctr_hssi_atoms_ncrypt.sv 
+# /share/quarter_sim_lib/ctrb_hssi_atoms_ncrypt.sv
+
+####/share/quarter_sim_lib/ctrb_hssi_atoms.sv
+
+###################################
+## src
+###################################
+
+# CM-sketch
+../src/one_hash_computation.sv
+../src/hash_computation.sv
+../src/min_computation.sv
+../src/sketch.sv
+../src/sketch_unit.sv
+../src/cm_sketch.sv
+
+# Sorted CAM
+../src/cam.sv
+
+# CM-sketch + Sorted CAM
+../src/hot_tracker.sv
+../src/hot_tracker_top.sv
+../src/afu_top.sv
+
+../src/axis_data_fifo.sv
+
+###################################
+## testbench
+###################################
+./tb_afu_top_random.sv

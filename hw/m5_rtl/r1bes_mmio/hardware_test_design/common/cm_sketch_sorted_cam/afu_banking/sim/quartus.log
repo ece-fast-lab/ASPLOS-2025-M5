@@ -1,0 +1,10 @@
+# Start logging UI actions
+# Tue May 28 20:14:43 2024
+[Tue May 28 20:15:07 2024] Window title: 'Monitoring Mode' | QPushButton '&OK' pressed!
+[Tue May 28 20:15:07 2024] [Action triggered] Window title: 'Quartus Prime Pro Edition - /home/yerjin0517/m5_impl/hardware_test_design_banking/cxltyp2_ed - cxltyp2_ed (monitoring mode) [*]' | P&rocessing > 'Compilation Dashboard' was pressed
+[Tue May 28 20:15:16 2024] [Action triggered] Window title: 'Quartus Prime Pro Edition - /home/yerjin0517/m5_impl/hardware_test_design_banking/cxltyp2_ed - cxltyp2_ed (monitoring mode) [*]' | P&rocessing > 'Compilation Dashboard' was pressed
+[Tue May 28 20:15:37 2024] [Compilation Dashboard] Window title: 'Quartus Prime Pro Edition - /home/yerjin0517/m5_impl/hardware_test_design_banking/cxltyp2_ed - cxltyp2_ed (monitoring mode) [*]' | 'rtl_analyzer_elaborated' button for task 'dni_elaboration' clicked
+[Tue May 28 20:27:46 2024] [Action triggered] Window title: 'Quartus Prime Pro Edition - /home/yerjin0517/m5_impl/hardware_test_design_banking/cxltyp2_ed - cxltyp2_ed (monitoring mode) [*]' | P&rocessing > 'Quit &Monitoring' was pressed
+[Tue May 28 20:28:02 2024] Window title: 'Quartus Prime' | QPushButton '&OK' pressed!
+# End of logging UI actions
+# Tue May 28 20:30:17 2024

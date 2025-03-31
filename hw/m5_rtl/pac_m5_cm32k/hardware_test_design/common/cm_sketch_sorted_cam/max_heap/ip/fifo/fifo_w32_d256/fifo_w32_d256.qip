@@ -1,0 +1,46 @@
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_TOOL_VERSION "23.3"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_TOOL_VENDOR_NAME "Intel Corporation"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_TOP_LEVEL_COMPONENT_NAME "fifo"
+set_global_assignment -library "fifo_w32_d256" -name SOPCINFO_FILE [file join $::quartus(qip_path) "fifo_w32_d256.sopcinfo"]
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name SLD_INFO "QSYS_NAME fifo_w32_d256 HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "fifo_w32_d256" -name MISC_FILE [file join $::quartus(qip_path) "fifo_w32_d256.cmp"]
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_TARGETED_DEVICE_FAMILY "Agilex 7"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 7}"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "fifo_w32_d256" -name MISC_FILE [file join $::quartus(qip_path) "../fifo_w32_d256.ip"]
+
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_NAME "Zmlmb193MzJfZDI1Nl9maWZvXzE5MjNfcm1vazNrcQ=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DISPLAY_NAME "RklGTyBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_VERSION "MTkuMi4z"
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL09uIENoaXAgTWVtb3J5"
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL2ZqbjE1NDg5MDM4MzI4ODkuaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL2ZubzE1NTA2MjYwMjcyNzQuaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3ZnbzE0Mzk0NTEwMDAzMDQuaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL21jbjE0NDEwOTI5NTgxOTguaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL2VpczE0MTQ0NjI3Njc4NzIuaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL21jbjE0MTMxODIyOTI1NjguaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL2VpczE0MTQ0NjI3Njc4NzIuaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL211ZjE0ODg1MTE0Nzg4MjUuaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3FrbzE1MTczNjM0MTA1MTIuaHRtbA=="
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_COMPONENT_NAME "Zmlmb193MzJfZDI1Ng=="
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "fifo_w32_d256" -library "fifo_w32_d256" -name IP_COMPONENT_VERSION "MS4w"
+
+
+set_global_assignment -library "fifo_1923" -name VERILOG_FILE [file join $::quartus(qip_path) "fifo_1923/synth/fifo_w32_d256_fifo_1923_rmok3kq.v"]
+set_global_assignment -library "fifo_w32_d256" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/fifo_w32_d256.v"]
+
+
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_TOOL_NAME "fifo"
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_TOOL_VERSION "19.2.3"
+set_global_assignment -entity "fifo_w32_d256_fifo_1923_rmok3kq" -library "fifo_1923" -name IP_TOOL_ENV "QsysPrimePro"
+

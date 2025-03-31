@@ -1,0 +1,385 @@
+// (C) 2001-2023 Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions and other 
+// software and tools, and its AMPP partner logic functions, and any output 
+// files from any of the foregoing (including device programming or simulation 
+// files), and any associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License Subscription 
+// Agreement, Intel FPGA IP License Agreement, or other applicable 
+// license agreement, including, without limitation, that your use is for the 
+// sole purpose of programming logic devices manufactured by Intel and sold by 
+// Intel or its authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+
+// Copyright 2023 Intel Corporation.
+//
+// THIS SOFTWARE MAY CONTAIN PREPRODUCTION CODE AND IS PROVIDED BY THE
+// COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+// WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+// DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+// BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+// WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+// OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+// EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+
+
+`ifndef AVST4TO1_SS_PLD_IF
+`define AVST4TO1_SS_PLD_IF
+
+//typedef struct {
+interface avst4to1_if;
+  //
+  // Common PLD IF
+  //
+    logic           app_xfer_pending_i;                    // Prevents entry to L1 or initiates exist from L1
+    logic           app_req_retry_en_i;                    // When asserted, HIP will respond to CFG TLPs with a
+                                                                           //   CRS (Config Retry Status) if it has not already
+                                                                           //   responded to a CFG with non-CRS status since the
+                                                                           //   last reset. Can be used to holdoff enumeration
+    
+    logic           pld_warm_rst_rdy_i;                    // PLD is ready for warm reset
+    
+    //
+    // RX side
+    logic           rx_st_ready_i;                         // indicates the per-port application layer can accept data
+    logic           rx_st_sop_s0_o;                        // indicates data segment is start of packet
+    logic           rx_st_sop_s1_o;                        //
+    logic           rx_st_sop_s2_o;                        //
+    logic           rx_st_sop_s3_o;                        //
+    logic           rx_st_eop_s0_o;                        // indicates data segment is end of packet
+    logic           rx_st_eop_s1_o;                        //
+    logic           rx_st_eop_s2_o;                        //
+    logic           rx_st_eop_s3_o;                        //
+    
+    logic  [2:0]    rx_st_empty_s0_o;                      // indicates the number of DW's that are empty during cycles that contain EOP
+    logic  [2:0]    rx_st_empty_s1_o;                      //
+    logic  [2:0]    rx_st_empty_s2_o;                      //
+    logic  [2:0]    rx_st_empty_s3_o;                      //
+    
+    logic  [255:0]  rx_st_data_s0_o;                       // data received
+    logic  [255:0]  rx_st_data_s1_o;                       //
+    logic  [255:0]  rx_st_data_s2_o;                       //
+    logic  [255:0]  rx_st_data_s3_o;                       //
+    logic           rx_st_dvalid_s0_o;
+    logic           rx_st_dvalid_s1_o;
+    logic           rx_st_dvalid_s2_o;
+    logic           rx_st_dvalid_s3_o;
+    
+    logic  [127:0]  rx_st_hdr_s0_o;                        // header recieved for each segment. valid on sop
+    logic  [127:0]  rx_st_hdr_s1_o;
+    logic  [127:0]  rx_st_hdr_s2_o;
+    logic  [127:0]  rx_st_hdr_s3_o;
+    logic           rx_st_hvalid_s0_o;
+    logic           rx_st_hvalid_s1_o;
+    logic           rx_st_hvalid_s2_o;
+    logic           rx_st_hvalid_s3_o;
+    
+    logic  [31:0]   rx_st_tlp_prfx_s0_o;                   // the first TLP prefix received for each segment
+    logic  [31:0]   rx_st_tlp_prfx_s1_o;
+    logic  [31:0]   rx_st_tlp_prfx_s2_o;
+    logic  [31:0]   rx_st_tlp_prfx_s3_o;
+
+    logic  [7:0]    rx_st_data_par_s0_o;                   // byte parity for data
+    logic  [7:0]    rx_st_data_par_s1_o;                   //
+    logic  [7:0]    rx_st_data_par_s2_o;                   //
+    logic  [7:0]    rx_st_data_par_s3_o;                   //
+    logic  [3:0]    rx_st_hdr_par_s0_o;                    // byte parity for header
+    logic  [3:0]    rx_st_hdr_par_s1_o;
+    logic  [3:0]    rx_st_hdr_par_s2_o;
+    logic  [3:0]    rx_st_hdr_par_s3_o;
+    logic           rx_st_tlp_prfx_par_s0_o;               // byte parity for TLP prefix
+    logic           rx_st_tlp_prfx_par_s1_o;
+    logic           rx_st_tlp_prfx_par_s2_o;
+    logic           rx_st_tlp_prfx_par_s3_o;
+    
+    logic  [11:0]   rx_st_tlp_RSSAI_prfx_s0_o;             // the first TLP prefix received for each segment
+    logic  [11:0]   rx_st_tlp_RSSAI_prfx_s1_o;
+    logic  [11:0]   rx_st_tlp_RSSAI_prfx_s2_o;
+    logic  [11:0]   rx_st_tlp_RSSAI_prfx_s3_o;
+    logic           rx_st_tlp_RSSAI_prfx_par_s0_o;         // byte parity for TLP prefix
+    logic           rx_st_tlp_RSSAI_prfx_par_s1_o;
+    logic           rx_st_tlp_RSSAI_prfx_par_s2_o;
+    logic           rx_st_tlp_RSSAI_prfx_par_s3_o;
+    logic  [1:0]    rx_st_pvalid_s0_o;                     // rx_st_pvalid_s0_o[0] indicates rx_st_tlp_prfx_s0_o is valid
+    logic  [1:0]    rx_st_pvalid_s1_o;                     // rx_st_pvalid_s0_o[1] indicates rx_st_tlp_RSSAI_prfx_s0_o is valid
+    logic  [1:0]    rx_st_pvalid_s2_o;
+    logic  [1:0]    rx_st_pvalid_s3_o;
+
+  
+    logic           rx_st_passthrough_s0_o;
+    logic           rx_st_passthrough_s1_o;
+    logic           rx_st_passthrough_s2_o;
+    logic           rx_st_passthrough_s3_o;
+    
+    logic           rx_st_vfactive_s0_o;                   // indicates TLP received is targeting a virtual function. valid on sop. multiplexed with header
+    logic           rx_st_vfactive_s1_o;                   //
+    logic           rx_st_vfactive_s2_o;                   //
+    logic           rx_st_vfactive_s3_o;                   //
+    
+    logic  [10:0]   rx_st_vfnum_s0_o;                      // virtual function number the received TLP is targeting valid on sop. multiplexed with header
+    logic  [10:0]   rx_st_vfnum_s1_o;                      //
+    logic  [10:0]   rx_st_vfnum_s2_o;                      //
+    logic  [10:0]   rx_st_vfnum_s3_o;                      //
+    
+    logic  [2:0]    rx_st_pfnum_s0_o;                      // function number the received TLP is targeting. valid on sop. multiplexed with header
+    logic  [2:0]    rx_st_pfnum_s1_o;                      //
+    logic  [2:0]    rx_st_pfnum_s2_o;                      //
+    logic  [2:0]    rx_st_pfnum_s3_o;                      //
+    
+    logic  [2:0]    rx_st_bar_s0_o;                        // indicates the bar range request targeting
+    logic  [2:0]    rx_st_bar_s1_o;                        //
+    logic  [2:0]    rx_st_bar_s2_o;                        //
+    logic  [2:0]    rx_st_bar_s3_o;                        //
+ 
+
+    logic [2:0]     rx_Hcrdt_update;                       // 2:CPLH 1:NPH 0:PH
+                                                                           //   1==credits indicated by corresponding *Hcrdt_cnt* bits
+                                                                           //   are being grantedVersion 2.42.3 5/15/20195/2/2019 Intel Confidential 14 of 19
+                                                                           //   1 credit=1 header, including TLP Prefix(if present and
+                                                                           //   supported)
+                                                                           //   Used both during header credit init phase(as described
+                                                                           //   below), and during normal operation, to indicate
+                                                                           //   master can increment its corresponding credit counter.
+                                                                           //   (master decrements corresponding credit counter
+                                                                           //   whenever it sends data)
+    logic [5:0]     rx_Hcrdt_update_cnt;                   // # of encoded credits given when corresponding *Hcrdt_update* is asserted.
+                                                                           //   [5:4] CPLH credits
+                                                                           //   [3:2] NPH credits
+                                                                           //   [1:0] PH credits
+    logic [2:0]     rx_Hcrdt_init;                         // 2:CPLH 1:NPH 0:PH
+                                                                           //   Asserted=1 to request begin header credit init phase, remains
+                                                                           //   asserted for entire header credit init phase. After master asserts
+                                                                           //   *Hcrdt_init_ack*, credits are transferred on *Hcrdt_update* and
+                                                                           //   *Hcrdt_cnt* each clock cycle. Deasserted=0 to indicate completion
+                                                                           //   of credit init phase.
+    logic [2:0]     rx_Hcrdt_init_ack;                     // 2:CPLH 1:NPH 0:PH
+                                                                           //   Master asserts ack=1 to indicate readiness to begin header credit
+                                                                           //   init phase.
+    logic [2:0]     rx_Dcrdt_update;                       // 2:CPLD 1:NPD 0:PD
+                                                                           //   1==credits indicated by corresponding *Dcrdt_cnt* bits
+                                                                           //   are being granted
+                                                                           //   1 credit=4DW=16B
+                                                                           //   Used both during data credit init phase(as described
+                                                                           //   below), and during normal operation, to indicate
+                                                                           //   master can increment its corresponding credit counter.
+                                                                           //   (master decrements corresponding credit counter
+                                                                           //   whenever it sends data)
+    logic [11:0]    rx_Dcrdt_update_cnt;                   // # of encoded credits given when corresponding
+                                                                           //   *Dcrdt_update* is asserted
+                                                                           //   [11:8] CPLD credits
+                                                                           //   [7:4] NPD credits
+                                                                           //   [3:0] PD credits
+    logic [2:0]     rx_Dcrdt_init;                         // 2:CPLD 1:NPD 0:PD
+                                                                           //   Asserted=1 to request begin data credit init phase, remains asserted
+                                                                           //   for entire data credit init phase. After master asserts
+                                                                           //   *Dcrdt_init_ack*, credits are transferred on *Dcrdt_update* and
+                                                                           //   *Dcrdt_cnt* each clock cycle. Deasserted=0 to indicate completion
+                                                                           //   of credit init phase.
+    logic [2:0]     rx_Dcrdt_init_ack;                     // 2:CPLD 1:NPD 0:PD
+                                                                           //   Master asserts ack=1 to indicate readiness to begin data credit init
+                                                                           //   phase.
+
+    //
+    // TX side
+    logic           tx_st_ready_o;                         // indicates the HIP is ready to access data
+    logic           tx_st_sop_s0_i;                        // indicates data segment is start of packet
+    logic           tx_st_sop_s1_i;                        //
+    logic           tx_st_sop_s2_i;                        //
+    logic           tx_st_sop_s3_i;                        //
+    logic           tx_st_eop_s0_i;                        // indicates data segment is end of packet
+    logic           tx_st_eop_s1_i;                        //
+    logic           tx_st_eop_s2_i;                        //
+    logic           tx_st_eop_s3_i;                        //
+    
+    logic           tx_st_passthrough_s0_i;
+    logic           tx_st_passthrough_s1_i;
+    logic           tx_st_passthrough_s2_i;
+    logic           tx_st_passthrough_s3_i;
+    
+    logic  [2:0]    tx_st_empty_s2_i;                      //
+    logic  [2:0]    tx_st_empty_s3_i;                      //
+    
+    logic  [255:0]  tx_st_data_s0_i;                       // data received
+    logic  [255:0]  tx_st_data_s1_i;                       //
+    logic  [255:0]  tx_st_data_s2_i;                       //
+    logic  [255:0]  tx_st_data_s3_i;                       //
+
+    logic  [7:0]    tx_st_data_par_s0_i;                   // byte parity for data
+    logic  [7:0]    tx_st_data_par_s1_i;                   //
+    logic  [7:0]    tx_st_data_par_s2_i;                   //
+    logic  [7:0]    tx_st_data_par_s3_i;                   //
+
+    logic           tx_st_dvalid_s0_i;
+    logic           tx_st_dvalid_s1_i;
+    logic           tx_st_dvalid_s2_i;
+    logic           tx_st_dvalid_s3_i;
+    
+    logic  [127:0]  tx_st_hdr_s0_i;                        // header recieved for each segment. valid on sop
+    logic  [127:0]  tx_st_hdr_s1_i;
+    logic  [127:0]  tx_st_hdr_s2_i;
+    logic  [127:0]  tx_st_hdr_s3_i;
+ 
+    logic  [3:0]    tx_st_hdr_par_s0_i;                    // byte parity for header
+    logic  [3:0]    tx_st_hdr_par_s1_i;
+    logic  [3:0]    tx_st_hdr_par_s2_i;
+    logic  [3:0]    tx_st_hdr_par_s3_i;
+
+    logic           tx_st_hvalid_s0_i;
+    logic           tx_st_hvalid_s1_i;
+    logic           tx_st_hvalid_s2_i;
+    logic           tx_st_hvalid_s3_i;
+    
+    logic  [31:0]   tx_st_tlp_prfx_s0_i;                   // the first TLP prefix received for each segment
+    logic  [31:0]   tx_st_tlp_prfx_s1_i;
+    logic  [31:0]   tx_st_tlp_prfx_s2_i;
+    logic  [31:0]   tx_st_tlp_prfx_s3_i;
+    
+ 
+    logic           tx_st_tlp_prfx_par_s0_i;               // byte parity for TLP prefix
+    logic           tx_st_tlp_prfx_par_s1_i;
+    logic           tx_st_tlp_prfx_par_s2_i;
+    logic           tx_st_tlp_prfx_par_s3_i;
+    
+    logic  [11:0]   tx_st_tlp_RSSAI_prfx_s0_i;             // the first TLP prefix received for each segment
+    logic  [11:0]   tx_st_tlp_RSSAI_prfx_s1_i;
+    logic  [11:0]   tx_st_tlp_RSSAI_prfx_s2_i;
+    logic  [11:0]   tx_st_tlp_RSSAI_prfx_s3_i;
+    logic           tx_st_tlp_RSSAI_prfx_par_s0_i;         // byte parity for TLP prefix
+    logic           tx_st_tlp_RSSAI_prfx_par_s1_i;
+    logic           tx_st_tlp_RSSAI_prfx_par_s2_i;
+    logic           tx_st_tlp_RSSAI_prfx_par_s3_i;
+    logic  [1:0]    tx_st_pvalid_s0_i;                     // tx_st_pvalid_s0_o[0] indicates tx_st_tlp_prfx_s0_o is valid
+    logic  [1:0]    tx_st_pvalid_s1_i;                     // tx_st_pvalid_s0_o[1] indicates tx_st_tlp_RSSAI_prfx_s0_o is valid
+    logic  [1:0]    tx_st_pvalid_s2_i;
+    logic  [1:0]    tx_st_pvalid_s3_i;
+
+
+
+    logic [2:0]     tx_Hcrdt_update;                       // 2:CPLH 1:NPH 0:PH
+                                                                            //   1==credits indicated by corresponding *Hcrdt_cnt* bits
+                                                                            //   are being grantedVersion 2.42.3 5/15/20195/2/2019 Intel Confidential 14 of 19
+                                                                            //   1 credit=1 header, including TLP Prefix(if present and
+                                                                            //   supported)
+                                                                            //   Used both during header credit init phase(as described
+                                                                            //   below), and during normal operation, to indicate
+                                                                            //   master can increment its corresponding credit counter.
+                                                                            //   (master decrements corresponding credit counter
+                                                                            //   whenever it sends data)
+    logic [5:0]     tx_Hcrdt_update_cnt;                   // # of encoded credits given when corresponding *Hcrdt_update* is asserted.
+                                                                           //   [5:4] CPLH credits
+                                                                           //   [3:2] NPH credits
+                                                                           //   [1:0] PH credits
+    logic [2:0]     tx_Hcrdt_init;                         // 2:CPLH 1:NPH 0:PH
+                                                                            //   Asserted=1 to request begin header credit init phase, remains
+                                                                            //   asserted for entire header credit init phase. After master asserts
+                                                                            //   *Hcrdt_init_ack*, credits are transferred on *Hcrdt_update* and
+                                                                            //   *Hcrdt_cnt* each clock cycle. Deasserted=0 to indicate completion
+                                                                            //   of credit init phase.
+    logic [2:0]     tx_Hcrdt_init_ack;                     // 2:CPLH 1:NPH 0:PH
+                                                                            //   Master asserts ack=1 to indicate readiness to begin header credit
+                                                                            //   init phase.
+    logic [2:0]     tx_Dcrdt_update;                       // 2:CPLD 1:NPD 0:PD
+                                                                            //   1==credits indicated by corresponding *Dcrdt_cnt* bits
+                                                                            //   are being granted
+                                                                            //   1 credit=4DW=16B
+                                                                            //   Used both during data credit init phase(as described
+                                                                            //   below), and during normal operation, to indicate
+                                                                            //   master can increment its corresponding credit counter.
+                                                                            //   (master decrements corresponding credit counter
+                                                                            //   whenever it sends data)
+    logic [11:0]    tx_Dcrdt_update_cnt;                   // # of encoded credits given when corresponding
+                                                                           //   *Dcrdt_update* is asserted
+                                                                           //   [11:8] CPLD credits
+                                                                           //   [7:4] NPD credits
+                                                                           //   [3:0] PD credits
+    logic [2:0]     tx_Dcrdt_init;                          // 2:CPLD 1:NPD 0:PD
+                                                                            //   Asserted=1 to request begin data credit init phase, remains asserted
+                                                                            //   for entire data credit init phase. After master asserts
+                                                                            //   *Dcrdt_init_ack*, credits are transferred on *Dcrdt_update* and
+                                                                            //   *Dcrdt_cnt* each clock cycle. Deasserted=0 to indicate completion
+                                                                            //   of credit init phase.
+    logic [2:0]     tx_Dcrdt_init_ack;                     // 2:CPLD 1:NPD 0:PD
+                                                                            //   Master asserts ack=1 to indicate readiness to begin data credit init
+                                                                            //   phase.
+
+
+    logic  [2:0]    tx_st_empty_s0_i;                      // indicates the number of DW's that are empty during cycles that contain EOP
+    logic  [2:0]    tx_st_empty_s1_i;                      //   for x4 use [1:0] of s0
+
+    modport com (
+                output   app_xfer_pending_i, app_req_retry_en_i, pld_warm_rst_rdy_i //, pld_ready_i
+    );
+
+    modport rx (
+                input    rx_st_sop_s0_o, rx_st_sop_s1_o, rx_st_sop_s2_o, rx_st_sop_s3_o,
+                         rx_st_eop_s0_o, rx_st_eop_s1_o, rx_st_eop_s2_o, rx_st_eop_s3_o,
+                         rx_st_empty_s0_o, rx_st_empty_s1_o, rx_st_empty_s2_o, rx_st_empty_s3_o,
+                         rx_st_data_s0_o, rx_st_data_s1_o, rx_st_data_s2_o, rx_st_data_s3_o,
+                         rx_st_data_par_s0_o, rx_st_data_par_s1_o, rx_st_data_par_s2_o, rx_st_data_par_s3_o,
+                         rx_st_dvalid_s0_o, rx_st_dvalid_s1_o, rx_st_dvalid_s2_o, rx_st_dvalid_s3_o,
+                         rx_st_hdr_s0_o, rx_st_hdr_s1_o, rx_st_hdr_s2_o, rx_st_hdr_s3_o,
+                         rx_st_hdr_par_s0_o, rx_st_hdr_par_s1_o, rx_st_hdr_par_s2_o,rx_st_hdr_par_s3_o,
+                         rx_st_hvalid_s0_o, rx_st_hvalid_s1_o, rx_st_hvalid_s2_o, rx_st_hvalid_s3_o,
+                         rx_st_tlp_prfx_s0_o, rx_st_tlp_prfx_s1_o, rx_st_tlp_prfx_s2_o, rx_st_tlp_prfx_s3_o,
+                         rx_st_tlp_prfx_par_s0_o, rx_st_tlp_prfx_par_s1_o, rx_st_tlp_prfx_par_s2_o, rx_st_tlp_prfx_par_s3_o,
+
+                         rx_st_tlp_RSSAI_prfx_s0_o, rx_st_tlp_RSSAI_prfx_s1_o, rx_st_tlp_RSSAI_prfx_s2_o, rx_st_tlp_RSSAI_prfx_s3_o,
+                         rx_st_tlp_RSSAI_prfx_par_s0_o, rx_st_tlp_RSSAI_prfx_par_s1_o, rx_st_tlp_RSSAI_prfx_par_s2_o, rx_st_tlp_RSSAI_prfx_par_s3_o,
+
+                         rx_st_pvalid_s0_o, rx_st_pvalid_s1_o, rx_st_pvalid_s2_o, rx_st_pvalid_s3_o,
+                         rx_st_vfactive_s0_o, rx_st_vfactive_s1_o, rx_st_vfactive_s2_o, rx_st_vfactive_s3_o,
+                         rx_st_vfnum_s0_o, rx_st_vfnum_s1_o, rx_st_vfnum_s2_o, rx_st_vfnum_s3_o,
+                         rx_st_pfnum_s0_o, rx_st_pfnum_s1_o, rx_st_pfnum_s2_o, rx_st_pfnum_s3_o,
+                         rx_st_bar_s0_o, rx_st_bar_s1_o, rx_st_bar_s2_o, rx_st_bar_s3_o,
+                         rx_st_passthrough_s0_o, rx_st_passthrough_s1_o, rx_st_passthrough_s2_o, rx_st_passthrough_s3_o
+
+    );
+
+
+    modport rx_crd (
+                input    rx_Hcrdt_init_ack, rx_Dcrdt_init_ack,
+                output   rx_Hcrdt_update_cnt, rx_Hcrdt_update, rx_Hcrdt_init,
+                         rx_Dcrdt_update_cnt, rx_Dcrdt_update, rx_Dcrdt_init
+    );
+
+
+    modport tx (
+                output   tx_st_sop_s0_i, tx_st_sop_s1_i, tx_st_sop_s2_i, tx_st_sop_s3_i,
+                         tx_st_eop_s0_i, tx_st_eop_s1_i, tx_st_eop_s2_i, tx_st_eop_s3_i,
+                         tx_st_empty_s0_i, tx_st_empty_s1_i, tx_st_empty_s2_i, tx_st_empty_s3_i,
+                         tx_st_data_s0_i, tx_st_data_s1_i, tx_st_data_s2_i, tx_st_data_s3_i,
+                         tx_st_data_par_s0_i, tx_st_data_par_s1_i, tx_st_data_par_s2_i, tx_st_data_par_s3_i,
+                         tx_st_dvalid_s0_i, tx_st_dvalid_s1_i, tx_st_dvalid_s2_i, tx_st_dvalid_s3_i,
+                         tx_st_hdr_s0_i, tx_st_hdr_s1_i, tx_st_hdr_s2_i, tx_st_hdr_s3_i,
+                         tx_st_hdr_par_s0_i, tx_st_hdr_par_s1_i, tx_st_hdr_par_s2_i, tx_st_hdr_par_s3_i,
+                         tx_st_hvalid_s0_i, tx_st_hvalid_s1_i, tx_st_hvalid_s2_i, tx_st_hvalid_s3_i,
+                         tx_st_tlp_prfx_s0_i, tx_st_tlp_prfx_s1_i, tx_st_tlp_prfx_s2_i, tx_st_tlp_prfx_s3_i,
+                         tx_st_tlp_prfx_par_s0_i, tx_st_tlp_prfx_par_s1_i, tx_st_tlp_prfx_par_s2_i, tx_st_tlp_prfx_par_s3_i,
+    
+                         tx_st_tlp_RSSAI_prfx_s0_i, tx_st_tlp_RSSAI_prfx_s1_i, tx_st_tlp_RSSAI_prfx_s2_i, tx_st_tlp_RSSAI_prfx_s3_i,
+                         tx_st_tlp_RSSAI_prfx_par_s0_i, tx_st_tlp_RSSAI_prfx_par_s1_i, tx_st_tlp_RSSAI_prfx_par_s2_i, tx_st_tlp_RSSAI_prfx_par_s3_i,
+
+                         tx_st_pvalid_s0_i, tx_st_pvalid_s1_i, tx_st_pvalid_s2_i, tx_st_pvalid_s3_i,
+                         tx_st_passthrough_s0_i, tx_st_passthrough_s1_i, tx_st_passthrough_s2_i, tx_st_passthrough_s3_i
+    );
+
+
+
+    modport tx_crd (
+                input    tx_Hcrdt_update_cnt, tx_Hcrdt_update, tx_Hcrdt_init,
+                         tx_Dcrdt_update_cnt, tx_Dcrdt_update, tx_Dcrdt_init,
+   
+                         tx_st_ready_o,
+
+                output   tx_Hcrdt_init_ack, tx_Dcrdt_init_ack
+    );
+
+endinterface
+
+`endif
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<internal_error>
+	<sub_system>ERR</sub_system>
+	<callstack>	0x7fde1617169d: ccl_err + 0x1369d (_ZN22ERR_UNWINDER_BACKTRACE15get_stack_traceEPPKviiPv + 0xed)
+	0x7fde1e424966: ccl_msg + 0x82966 (_Z21msg_ie_get_call_stackPv + 0xc4)
+	0x7fde1e42688e: ccl_msg + 0x8488e (_ZN18MSG_INTERNAL_ERROR12report_fatalEPKcPvb + 0x40)
+	0x7fde16174f14: ccl_err + 0x16f14 (_Z26err_report_fatal_exceptionPKcPvb + 0x62)
+	0x7fde161751ab: ccl_err + 0x171ab (err_sigaction_handler + 0x186)
+	0x7fde16fb1cf0: pthread + 0x12cf0
+	0x7fde1c5a90c3: db_rdb + 0x1ea0c3 (_ZN15PDB_CLASS_THUNKI17RDB_FOLDER_OBJECTE11this_ptr_fnEPv + 0x3)
+	0x7fde15953ac8: ccl_pdb + 0x22ac8 (_ZN18PDB_SEGMENT_WRITER7xfr_ptrERPvPK21PDB_STATIC_THUNK_INFO + 0x38)
+	0x7fde1c5a34be: db_rdb + 0x1e44be (_ZN10RDB_REPORTlsER20PDB_SEGMENT_TEMPLATEI16PDB_RDB_SEG_BASEE + 0x6e)
+	0x7fde1595576e: ccl_pdb + 0x2476e (_Z18pdb_write_ptr_implR11PDB_ARCHIVEPKcS2_PFvR16PDB_BASE_SEGMENTRPvES6_ji20CLW_COMPRESSION_TYPEPK7lzma_mt + 0x13e)
+	0x7fde15955a87: ccl_pdb + 0x24a87 (_Z13pdb_write_ptrR11PDB_ARCHIVEPKcS2_PFvR16PDB_BASE_SEGMENTRPvES6_ji20CLW_COMPRESSION_TYPE + 0x17)
+	0x7fde1c5988c4: db_rdb + 0x1d98c4 (_ZNK17RDB_MODEL_HANDLER19write_model_to_fileEP9QDB_MODELRK8QDB_FILEb + 0x5b4)
+	0x7fde1d096bd3: db_qdb + 0x36bd3 (_ZN16QDB_SERVICE_IMPL17export_model_implEP9QDB_MODELRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPbP16CPT_AMPP_OSTREAM + 0x483)
+	0x7fde1c476511: db_rdb + 0xb7511 (_ZN15RDB_REPORT_IMPL24unprotected_write_reportER10RDB_REPORTRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_ + 0xc1)
+	0x7fde1c4777f9: db_rdb + 0xb87f9 (_ZN10RDB_REPORT12write_reportERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ + 0x129)
+	0x7fde1c477994: db_rdb + 0xb8994 (_ZN10RDB_REPORT12write_reportERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE15RDB_REPORT_TYPE + 0x84)
+	   0x40980f: quartus_syn + 0x40980f (_ZN20QSYN2_REPORT_MANAGER20write_report_to_diskEbbbb + 0x6f)
+	0x7fde1c75f165: synth_qis + 0xaf165 (qis_write_rtl_report + 0x5df)
+	0x7fde1a2d1b47: tcl8.6 + 0x4bb47 (TclNRRunCallbacks + 0x67)
+	0x7fde1a2d2f29: tcl8.6 + 0x4cf29 (TclEvalEx + 0x599)
+	0x7fde1a37a0fe: tcl8.6 + 0xf40fe (Tcl_FSEvalFileEx + 0x21e)
+	0x7fde1a37a246: tcl8.6 + 0xf4246 (Tcl_EvalFile + 0x26)
+	0x7fde1d3a843c: comp_qexe + 0x2743c (_Z24qexe_evaluate_tcl_scriptRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE + 0x388)
+	0x7fde1d3aaa9b: comp_qexe + 0x29a9b (_ZL11qexe_do_tclP14QEXE_FRAMEWORKRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_RKNS1_4listIS6_SaIS6_EEEbb + 0x4da)
+	0x7fde1d3aba59: comp_qexe + 0x2aa59 (_Z19qexe_run_tcl_optionP14QEXE_FRAMEWORKPKcPNSt7__cxx114listINS3_12basic_stringIcSt11char_traitsIcESaIcEEESaIS9_EEEb + 0x687)
+	0x7fde1dfce2f9: comp_qcu + 0x6d2f9 (_ZN3QCU6DETAIL26intialise_qhd_and_run_qexeER13QCU_FRAMEWORKRK8FIO_PATHRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESD_PKcPNS6_4listISB_SaISB_EEEb + 0x99)
+	0x7fde1dfce6af: comp_qcu + 0x6d6af (_Z18qcu_run_tcl_optionP13QCU_FRAMEWORKPKcPNSt7__cxx114listINS3_12basic_stringIcSt11char_traitsIcESaIcEEESaIS9_EEEb + 0x349)
+	   0x40744a: quartus_syn + 0x40744a (_ZL37qsyn2_tcl_process_default_flow_option22ACF_VARIABLE_TYPE_ENUMPKc + 0x4c1)
+	0x7fde1d3b05f6: comp_qexe + 0x2f5f6 (_Z18qexe_standard_mainP14QEXE_FRAMEWORKPPK22QEXE_OPTION_DEFINITIONiPPKc + 0x81d)
+	   0x406e7c: quartus_syn + 0x406e7c (_Z10qsyn2_mainiPPKc + 0x123)
+	0x7fde1e3e55f6: ccl_msg + 0x435f6 (_Z15msg_main_threadPv + 0x10)
+	0x7fde1e3e67a1: ccl_msg + 0x447a1 (_Z18msg_thread_wrapperPFPvS_ES_ + 0x8c)
+	0x7fde1e4fb7bd: ccl_mem + 0x1b7bd (_Z18mem_thread_wrapperPFPvS_ES_ + 0x9d)
+	0x7fde1616ec29: ccl_err + 0x10c29 (_Z18err_thread_wrapperPFPvS_ES_ + 0x1e)
+	0x7fde1e3e66ca: ccl_msg + 0x446ca (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xdb)
+	   0x406d52: quartus_syn + 0x406d52 (main + 0x26)
+	0x7fde161ecd85: c + 0x3ad85 (__libc_start_main + 0xe5)
+	   0x406c79: quartus_syn + 0x406c79 (_start + 0x29)
+</callstack>
+	<error>*** Fatal Error: Segment Violation: faulting address=0x2e909c7c129, PC=0x7fde1c5a90c3 : 0x7fde1c5a90c3: db_rdb!PDB_CLASS_THUNK&lt;RDB_FOLDER_OBJECT&gt;::this_ptr_fn(void*) + 0x3</error>
+	<date>Sun Mar 10 18:31:36 2024
+</date>
+	<version>Version 23.3.0 Build 104 09/20/2023 SC Pro Edition</version>
+</internal_error>

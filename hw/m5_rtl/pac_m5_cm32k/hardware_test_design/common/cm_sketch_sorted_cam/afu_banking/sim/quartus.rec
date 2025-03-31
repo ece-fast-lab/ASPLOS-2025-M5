@@ -1,0 +1,7 @@
+# Start logging TCL commands
+# Tue May 28 20:14:43 2024
+project_open "/home/yerjin0517/m5_impl/hardware_test_design_banking/cxltyp2_ed.qpf"
+# tmwq_open_rtl_analyzer dms_path::user_runs::default_run::elaborated
+project_close
+# End of logging TCL commands
+# Tue May 28 20:30:17 2024

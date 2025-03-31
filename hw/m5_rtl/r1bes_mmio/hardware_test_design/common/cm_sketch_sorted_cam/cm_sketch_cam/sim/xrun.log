@@ -1,0 +1,45 @@
+xrun(64): 19.03-s009: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.03-s009: Started on May 17, 2024 at 19:57:40 KST
+xrun
+	-f xrun_arg
+		-access rwc
+		-64
+		-smartorder
+		-SV
+		-v93
+		-licqueue
+		-ALLOWREDEFINITION
+		-relax
+		-namemap_mixgen
+		+DISABLEGENCHK
+		-incdir ../header
+		-top cm_sketch_cam_tb_random
+		-f filelist
+			/tools/Xilinx/Vivado/2020.2/data/verilog/src/glbl.v
+			../src/one_hash_computation.sv
+			../src/hash_computation.sv
+			../src/min_computation.sv
+			../src/sketch.sv
+			../src/cm_sketch.sv
+			../src/cam.sv
+			../src/cm_sketch_cam_top.sv
+			./cm_sketch_cam_tb_random.sv
+		-incdir ../ip/axis_data_fifo/hdl
+		-y /tools/Xilinx/Vivado/2020.2/data/verilog/src/unisims
+		-cdslib /home/jhpark/workspace/vivado/compile_simlib/cds_unisims_ver.lib
+		-top glbl
+	-define WAVE
+	-define SIM
+	-define XILINX
+	+define+W=4096
+	+define+NUM_HASH=4
+	+define+NUM_ENTRY=25
+xrun: *W,MLIBEXT: -y option was used without -libext flag.
+Loading snapshot worklib.cm_sketch_cam_tb_random:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /tools/cadence/XCELIUM1903/tools/xcelium/files/xmsimrc
+xcelium> run
+Simulation complete via $finish(1) at time 25391183 PS + 0
+./cm_sketch_cam_tb_random.sv:98       $finish;
+xcelium> exit
+TOOL:	xrun(64)	19.03-s009: Exiting on May 17, 2024 at 19:57:44 KST  (total: 00:00:04)

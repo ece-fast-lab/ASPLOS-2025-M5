@@ -1,0 +1,82 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 168 216)
+	(text "pll_0" (rect 70 0 87 12)(font "SansSerif" (font_size 11)))
+	(text "inst" (rect 8 200 20 212)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "inclk" (rect 0 0 16 12)(font "SansSerif" (font_size 8)))
+		(text "inclk" (rect 4 65 34 76)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 168 72)
+		(output)
+		(text "clock_div1x" (rect 0 0 46 12)(font "SansSerif" (font_size 8)))
+		(text "clock_div1x" (rect 112 65 178 76)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 168 120)
+		(output)
+		(text "clock_div2x" (rect 0 0 47 12)(font "SansSerif" (font_size 8)))
+		(text "clock_div2x" (rect 110 115 176 126)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 168 176)
+		(output)
+		(text "clock_div4x" (rect 0 0 48 12)(font "SansSerif" (font_size 8)))
+		(text "clock_div4x" (rect 110 165 176 176)(font "SansSerif" (font_size 8)))
+	)
+	(drawing
+		(text "inclk" (rect 9 46 48 105)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 39 71 96 152)(font "SansSerif" (color 0 0 0)))
+		(text "clock_div1x" (rect 86 46 238 105)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 70 71 158 152)(font "SansSerif" (color 0 0 0)))
+		(text "clock_div2x" (rect 86 96 238 205)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 70 121 158 252)(font "SansSerif" (color 0 0 0)))
+		(text "clock_div4x" (rect 86 146 238 305)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 70 171 158 352)(font "SansSerif" (color 0 0 0)))
+		(text " pll_0 " (rect 147 201 336 412)(font "SansSerif" ))
+		(line (pt 34 34)(pt 85 34)(line_width 1))
+		(line (pt 85 34)(pt 85 201)(line_width 1))
+		(line (pt 34 201)(pt 85 201)(line_width 1))
+		(line (pt 34 34)(pt 34 201)(line_width 1))
+		(line (pt 0 76)(pt 34 76)(line_width 1))
+		(line (pt 35 55)(pt 35 80)(line_width 1))
+		(line (pt 36 55)(pt 36 80)(line_width 1))
+		(line (pt 170 76)(pt 85 76)(line_width 1))
+		(line (pt 84 55)(pt 84 80)(line_width 1))
+		(line (pt 83 55)(pt 83 80)(line_width 1))
+		(line (pt 170 126)(pt 85 126)(line_width 1))
+		(line (pt 84 105)(pt 84 130)(line_width 1))
+		(line (pt 83 105)(pt 83 130)(line_width 1))
+		(line (pt 170 176)(pt 85 176)(line_width 1))
+		(line (pt 84 155)(pt 84 180)(line_width 1))
+		(line (pt 83 155)(pt 83 180)(line_width 1))
+		(line (pt 0 0)(pt 170 0)(line_width 1))
+		(line (pt 170 0)(pt 170 218)(line_width 1))
+		(line (pt 0 218)(pt 170 218)(line_width 1))
+		(line (pt 0 0)(pt 0 218)(line_width 1))
+	)
+)

@@ -1,0 +1,340 @@
+xrun(64): 19.03-s009: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.03-s009: Started on Jun 12, 2024 at 15:14:08 KST
+xrun
+	-f xrun_arg
+		-access rwc
+		-64
+		-smartorder
+		-SV
+		-v93
+		-licqueue
+		-ALLOWREDEFINITION
+		-relax
+		-namemap_mixgen
+		+DISABLEGENCHK
+		-incdir ../header
+		-top tb_afu_top_random
+		-f filelist
+			/tools/Xilinx/Vivado/2020.2/data/verilog/src/glbl.v
+			../header/clst_pkg.sv
+			../header/afu_axi_if_pkg.sv
+			../header/cxlip_top_pkg.sv
+			../header/mc_axi_if_pkg.sv
+			../ip/axis_data_fifo/sim/axis_data_fifo_0.v
+			../ip/axis_data_fifo/hdl/axis_data_fifo_v2_0_vl_rfs.v
+			../ip/axis_data_fifo/hdl/axis_infrastructure_v1_1_vl_rfs.v
+			../ip/fifo/fifo_w32_d256/sim/fifo_w32_d256.v
+			../ip/fifo/fifo_w32_d256/fifo_1923/sim/fifo_w32_d256_fifo_1923_rmok3kq.v
+			../src/one_hash_computation.sv
+			../src/hash_computation.sv
+			../src/min_computation.sv
+			../src/sketch.sv
+			../src/sketch_unit.sv
+			../src/cm_sketch.sv
+			../src/cam.sv
+			../src/hot_tracker.sv
+			../src/hot_tracker_top.sv
+			../src/afu_top.sv
+			../src/axis_data_fifo.sv
+			./tb_afu_top_random.sv
+		-incdir ../ip/axis_data_fifo/hdl
+		-y /tools/Xilinx/Vivado/2020.2/data/verilog/src/unisims
+		-cdslib /home/jhpark/workspace/vivado/compile_simlib/cds_unisims_ver.lib
+		-top glbl
+	-define WAVE
+	-define SIM
+	-define XILINX
+	+define+W=8192
+	+define+NUM_HASH=4
+	+define+NUM_ENTRY=25
+	+define+NUM_INPUT=100
+xrun: *W,MLIBEXT: -y option was used without -libext flag.
+Recompiling... reason: file '../src/hot_tracker_top.sv' is newer than expected.
+	expected: Wed Jun 12 14:23:37 2024
+	actual:   Wed Jun 12 15:13:55 2024
+file: ../src/hot_tracker_top.sv
+	module worklib.hot_tracker_top:sv
+		errors: 0, warnings: 0
+file: ./tb_afu_top_random.sv
+`define NUM_INPUT 1000000
+                         |
+xmvlog: *W,MACNDF (./tb_afu_top_random.sv,8|25): The text macro 'NUM_INPUT' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define W 65536
+               |
+xmvlog: *W,MACNDF (./tb_afu_top_random.sv,11|15): The text macro 'W' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define NUM_HASH 4
+                  |
+xmvlog: *W,MACNDF (./tb_afu_top_random.sv,18|18): The text macro 'NUM_HASH' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define NUM_ENTRY 25
+                    |
+xmvlog: *W,MACNDF (./tb_afu_top_random.sv,22|20): The text macro 'NUM_ENTRY' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+      $fscanf(trace_file, "%d\n", araddr_fifo);
+            |
+xmvlog: *W,NOSYST (./tb_afu_top_random.sv,157|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+xmvlog: *W,LIBNOU: Library "/tools/Xilinx/Vivado/2020.2/data/verilog/src/unisims" given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 5
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+  u_afu_top
+          |
+xmelab: *W,CUVWSP (./tb_afu_top_random.sv,302|10): 1 output port was not connected:
+xmelab: (../src/afu_top.sv,69): mem_chan_rd_en
+
+  u_afu_top
+          |
+xmelab: *W,CUVWSI (./tb_afu_top_random.sv,302|10): 2 input ports were not connected:
+xmelab: (../src/afu_top.sv,70): csr_addr_ub
+xmelab: (../src/afu_top.sv,71): csr_addr_lb
+
+	Top level design units:
+		clst_pkg
+		afu_axi_if_pkg
+		cxlip_top_pkg
+		mc_axi_if_pkg
+		$unit_0x028b5870
+		tb_afu_top_random
+		glbl
+xmelab: *W,CUSRCH: Resolved design unit 'xpm_fifo_axis' at 'xpm_fifo_axis_inst' to 'xpm.xpm_fifo_axis:module' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'xpm_fifo_base' at 'xpm_fifo_base_inst' to 'xpm.xpm_fifo_base:module' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'xpm_fifo_rst' at 'xpm_fifo_rst_inst' to 'xpm.xpm_fifo_rst:module' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'xpm_fifo_reg_bit' at 'rst_d1_inst' to 'xpm.xpm_fifo_reg_bit:module' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'xpm_counter_updn' at 'wrp_inst' to 'xpm.xpm_counter_updn:module' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'xpm_memory_base' at 'xpm_memory_base_inst' to 'xpm.xpm_memory_base:module' through a global search of all libraries.
+xmelab: *W,CUSRCH: Resolved design unit 'xpm_cdc_sync_rst' at 'xpm_cdc_sync_rst_inst' to 'xpm.xpm_cdc_sync_rst:module' through a global search of all libraries.
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+  .s_axis_tdata   ( {{(ADDR_SIZE-DATA_SIZE){1'b0}}, araddr[ADDR_SIZE-1:ADDR_SIZE-DATA_SIZE]} ),
+                    |
+xmelab: *W,CUVMPW (../src/hot_tracker_top.sv,351|20): port sizes differ in port connection (33/32).
+  .m_axis_tdata   ( araddr_h2c   )
+                             |
+xmelab: *W,CUVMPW (../src/hot_tracker_top.sv,353|29): port sizes differ in port connection (33/32).
+    .s_axis_tstrb(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,112|19): port sizes differ in port connection (64/4).
+    .s_axis_tkeep(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,113|19): port sizes differ in port connection (64/4).
+  .s_axis_tdata   ( mig_addr_h2c  ),
+                               |
+xmelab: *W,CUVMPW (../src/hot_tracker_top.sv,369|31): port sizes differ in port connection (33/32).
+  .m_axis_tdata   ( mig_addr        )
+                           |
+xmelab: *W,CUVMPW (../src/hot_tracker_top.sv,371|27): port sizes differ in port connection (33/32).
+    .s_axis_tstrb(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,112|19): port sizes differ in port connection (64/4).
+    .s_axis_tkeep(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,113|19): port sizes differ in port connection (64/4).
+  .s_axis_tdata   ( awaddr_fifo  ),
+                              |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,327|30): port sizes differ in port connection (33/32).
+  .m_axis_tdata   ( awaddr   ),
+                         |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,331|25): port sizes differ in port connection (33/32).
+    .s_axis_tstrb(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,112|19): port sizes differ in port connection (64/4).
+    .s_axis_tkeep(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,113|19): port sizes differ in port connection (64/4).
+  .s_axis_tdata   ( awaddr  ),
+                         |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,342|25): port sizes differ in port connection (33/32).
+  .m_axis_tdata   ( awaddr_r   ),
+                           |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,346|27): port sizes differ in port connection (33/32).
+    .s_axis_tstrb(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,112|19): port sizes differ in port connection (64/4).
+    .s_axis_tkeep(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,113|19): port sizes differ in port connection (64/4).
+  .s_axis_tdata   ( araddr_fifo  ),
+                              |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,357|30): port sizes differ in port connection (33/32).
+  .m_axis_tdata   ( araddr   ),
+                         |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,361|25): port sizes differ in port connection (33/32).
+    .s_axis_tstrb(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,112|19): port sizes differ in port connection (64/4).
+    .s_axis_tkeep(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,113|19): port sizes differ in port connection (64/4).
+  .s_axis_tdata   ( araddr  ),
+                         |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,372|25): port sizes differ in port connection (33/32).
+  .m_axis_tdata   ( araddr_r   ),
+                           |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,376|27): port sizes differ in port connection (33/32).
+    .s_axis_tstrb(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,112|19): port sizes differ in port connection (64/4).
+    .s_axis_tkeep(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,113|19): port sizes differ in port connection (64/4).
+  .s_axis_tdata   ( mig_addr  ),
+                           |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,387|27): port sizes differ in port connection (33/32).
+  .m_axis_tdata   ( mig_addr_r   ),
+                             |
+xmelab: *W,CUVMPW (./tb_afu_top_random.sv,391|29): port sizes differ in port connection (33/32).
+    .s_axis_tstrb(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,112|19): port sizes differ in port connection (64/4).
+    .s_axis_tkeep(64'HFFFFFFFFFFFFFFFF),
+                   |
+xmelab: *W,CUVMPW (../ip/axis_data_fifo/sim/axis_data_fifo_0.v,113|19): port sizes differ in port connection (64/4).
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.hot_tracker_top:sv <0x013e1b84>
+			streams:  30, words: 12927
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                 186      24
+		Verilog packages:          4       4
+		Registers:             11543    1370
+		Scalar wires:           1199       -
+		Expanded wires:         1857      72
+		Vectored wires:          520       -
+		Named events:              0     146
+		Always blocks:         33484     870
+		Initial blocks:          548     323
+		Cont. assignments:       529     347
+		Pseudo assignments:      310     137
+		Assertions:                7     151
+		Compilation units:         1       1
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.tb_afu_top_random:sv
+Loading snapshot worklib.tb_afu_top_random:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /tools/cadence/XCELIUM1903/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,LMTMSG: packed array at "tb_afu_top_random.u_afu_top.u_hot_tracker_top.araddr_fifo.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.init_param.mem_param" of 45056 elements exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 45056' to adjust limit.
+xmsim: *W,LMTMSG: packed array at "tb_afu_top_random.u_afu_top.u_hot_tracker_top.mig_addr_fifo.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.init_param.mem_param" of 45056 elements exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 45056' to adjust limit.
+xmsim: *W,LMTMSG: packed array at "tb_afu_top_random.master_write.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.init_param.mem_param" of 45056 elements exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 45056' to adjust limit.
+xmsim: *W,LMTMSG: packed array at "tb_afu_top_random.slave_write.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.init_param.mem_param" of 45056 elements exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 45056' to adjust limit.
+xmsim: *W,LMTMSG: packed array at "tb_afu_top_random.master_read.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.init_param.mem_param" of 45056 elements exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 45056' to adjust limit.
+xmsim: *W,LMTMSG: packed array at "tb_afu_top_random.slave_read.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.init_param.mem_param" of 45056 elements exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 45056' to adjust limit.
+xmsim: *W,LMTMSG: packed array at "tb_afu_top_random.addr_queue.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.init_param.mem_param" of 45056 elements exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 45056' to adjust limit.
+xmsim: *W,SHMPOPT: Some objects excluded from $shm_probe due to optimizations.
+            File: ./tb_afu_top_random.sv, line = 400, pos = 13
+           Scope: tb_afu_top_random
+            Time: 0 FS + 0
+
+Read araddr: 004cb27 ( 1518 ns)
+Read araddr: 003e4d2 ( 1523 ns)
+Read araddr: 00597bc ( 1527 ns)
+Read araddr: 004c4be ( 1532 ns)
+Read araddr: 0004697 ( 1536 ns)
+Read araddr: 000e3b3 ( 1540 ns)
+Read araddr: 0009f25 ( 1545 ns)
+Read araddr: 001c3ea ( 1549 ns)
+Read araddr: 00502a6 ( 1554 ns)
+Read araddr: 00410de ( 1558 ns)
+Read araddr: 00287ae ( 1563 ns)
+Read araddr: 0045935 ( 1567 ns)
+Read araddr: 005eca6 ( 1572 ns)
+Read araddr: 002bfd8 ( 1576 ns)
+Read araddr: 002f245 ( 1580 ns)
+Read araddr: 0031ec5 ( 1585 ns)
+Read araddr: 005f738 ( 1589 ns)
+Read araddr: 00421cc ( 1594 ns)
+Read araddr: 002ba60 ( 1598 ns)
+Read araddr: 000a7e8 ( 1603 ns)
+Read araddr: 0028a01 ( 1607 ns)
+Read araddr: 004863d ( 1612 ns)
+Read araddr: 0059f84 ( 1616 ns)
+Read araddr: 0021182 ( 1620 ns)
+Read araddr: 000f2ce ( 1625 ns)
+Read araddr: 000b7d2 ( 1629 ns)
+Read araddr: 0050e5e ( 1634 ns)
+Read araddr: 000f005 ( 1638 ns)
+Read araddr: 004ca40 ( 1643 ns)
+Read araddr: 003cb13 ( 1647 ns)
+Read araddr: 003e680 ( 1652 ns)
+Read araddr: 005667e ( 1656 ns)
+Read araddr: 0004d14 ( 1660 ns)
+Read araddr: 004a629 ( 1665 ns)
+Read araddr: 00302a1 ( 1669 ns)
+Read araddr: 001ad65 ( 1674 ns)
+Read araddr: 001fcf1 ( 1678 ns)
+Read araddr: 00421b3 ( 1683 ns)
+Read araddr: 004590d ( 1687 ns)
+Read araddr: 0009bd7 ( 1692 ns)
+Read araddr: 0032e97 ( 1696 ns)
+Read araddr: 001b3ae ( 1700 ns)
+Read araddr: 00070a0 ( 1705 ns)
+Read araddr: 003ee65 ( 1709 ns)
+Read araddr: 001b3fd ( 1714 ns)
+Read araddr: 001e98e ( 1718 ns)
+Read araddr: 000c625 ( 1723 ns)
+Read araddr: 0022f3b ( 1727 ns)
+Read araddr: 0034fe4 ( 1732 ns)
+Read araddr: 0043575 ( 1736 ns)
+Read araddr: 004adab ( 1740 ns)
+Read araddr: 0007a63 ( 1745 ns)
+Read araddr: 000f9b6 ( 1749 ns)
+Read araddr: 005b6a4 ( 1754 ns)
+Read araddr: 003f141 ( 1758 ns)
+Read araddr: 0055f75 ( 1763 ns)
+Read araddr: 004ef8b ( 1767 ns)
+Read araddr: 0031ffc ( 1772 ns)
+Read araddr: 0041d05 ( 1776 ns)
+Read araddr: 003a2c4 ( 1780 ns)
+Read araddr: 00209d6 ( 1785 ns)
+Read araddr: 001104b ( 1789 ns)
+Read araddr: 003ca1b ( 1794 ns)
+Read araddr: 0021c59 ( 1798 ns)
+Read araddr: 0009d2f ( 1803 ns)
+Read araddr: 0037e4d ( 1807 ns)
+Read araddr: 00520b6 ( 1812 ns)
+Read araddr: 0010ab9 ( 1816 ns)
+Read araddr: 0016d79 ( 1820 ns)
+Read araddr: 001c10a ( 1825 ns)
+Read araddr: 002493b ( 1829 ns)
+Read araddr: 003b2d7 ( 1834 ns)
+Read araddr: 003f8d2 ( 1838 ns)
+Read araddr: 00148bb ( 1843 ns)
+Read araddr: 0002e93 ( 1847 ns)
+Read araddr: 004aaa9 ( 1852 ns)
+Read araddr: 0010ee3 ( 1856 ns)
+Read araddr: 005a339 ( 1860 ns)
+Read araddr: 004a75f ( 1865 ns)
+Read araddr: 00452e0 ( 1869 ns)
+Read araddr: 001d0f9 ( 1874 ns)
+Read araddr: 003634b ( 1878 ns)
+Read araddr: 005b924 ( 1883 ns)
+Read araddr: 005e889 ( 1887 ns)
+Read araddr: 0061379 ( 1892 ns)
+Read araddr: 000a62e ( 1896 ns)
+Read araddr: 0052a7b ( 1900 ns)
+Read araddr: 001b558 ( 1905 ns)
+Read araddr: 001bf3f ( 1909 ns)
+Read araddr: 0026620 ( 1914 ns)
+Read araddr: 0007649 ( 1918 ns)
+Read araddr: 0001e18 ( 1923 ns)
+Read araddr: 00525d8 ( 1927 ns)
+Read araddr: 0005743 ( 1932 ns)
+Read araddr: 003baa3 ( 1936 ns)
+Read araddr: 00496f0 ( 1940 ns)
+Read araddr: 00130d3 ( 1945 ns)
+Read araddr: 004de74 ( 1949 ns)
+Read araddr: 000ffcb ( 1954 ns)
+Read araddr: 003634f ( 1958 ns)
+Simulation complete via $finish(1) at time 16947683 PS + 0
+./tb_afu_top_random.sv:169       $finish;
+xcelium> exit
+TOOL:	xrun(64)	19.03-s009: Exiting on Jun 12, 2024 at 15:14:15 KST  (total: 00:00:07)

@@ -1,0 +1,16 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-f
+xrun_arg
+-define
+WAVE
+-define
+SIM
+-define
+XILINX
++define+W=64
++define+NUM_HASH=4
++define+NUM_ENTRY=25
++define+NUM_INPUT=100

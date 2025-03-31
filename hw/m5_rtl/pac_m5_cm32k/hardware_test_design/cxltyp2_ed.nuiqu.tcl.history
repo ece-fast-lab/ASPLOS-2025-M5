@@ -1,0 +1,12 @@
+# TCL commands history
+# Thu Jan 23 18:54:08 2025
+dni::trigger_gui -command gui_command::rtl_analyzer::expand_upper_hierarchy -options {"checkpoint":"user_runs/default_run/constrained"}
+dni::selection -action set -object {}
+dni::trigger_gui -command gui_command::rtl_analyzer::unfold -options {"checkpoint":"user_runs/default_run/constrained","object":"button @hier_unfold inst ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst custom_csr_top {}"}
+dni::selection -action set -object {}
+dni::trigger_gui -command gui_command::rtl_analyzer::set_view_mode -options {"checkpoint":"user_runs/default_run/constrained","enable":"on","mode":"zoom"}
+nuiqu_zoom_in -x_pos 176 -y_pos 196 -checkpoint user_runs/default_run/constrained
+dni::trigger_gui -command gui_command::rtl_analyzer::set_view_mode -options {"checkpoint":"user_runs/default_run/constrained","enable":"on","mode":"selection"}
+dni::selection -action set -object {net_bus::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|h_pfn_addr_i}
+dni::trigger_gui -command gui_command::rtl_analyzer::open_sweep_hints_viewer -options {"checkpoint":"user_runs/default_run/constrained"}
+dni::trigger_gui -command gui_command::rtl_analyzer::open_sweep_hints_viewer -options {"checkpoint":"user_runs/default_run/constrained"}

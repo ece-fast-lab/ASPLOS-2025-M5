@@ -1,0 +1,12 @@
+BLOCK                         START ADDRESS   END ADDRESS     
+
+P1                            0x00020000      0x0133AFFF (0x0133AB97)
+OPTION BITS                   0x00010000      0x00010080
+
+
+
+Notes:
+
+- Data checksum for this conversion is 0x3D8A9941
+
+- All the addresses in this file are byte addresses

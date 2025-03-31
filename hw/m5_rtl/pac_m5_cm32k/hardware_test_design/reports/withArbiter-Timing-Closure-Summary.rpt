@@ -1,0 +1,57 @@
+Timing Closure Summary report for cxltyp2_ed
+Sat Mar  2 22:16:26 2024
+Quartus Prime Version 23.3.0 Build 104 09/20/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Closure Summary
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------------------------+
+; Timing Closure Summary                                                ;
++------------------------------------------------------+----------------+
+; Panel Name                                           ; Result Flag    ;
++------------------------------------------------------+----------------+
+; Timing Closure                                       ; Fail           ;
+;   Setup Summary                                      ; Fail           ;
+;   Hold Summary                                       ; Pass           ;
+;   Recovery Summary                                   ; Pass           ;
+;   Removal Summary                                    ; Pass           ;
+;   Setup Data Delay Summary                           ; Not Found      ;
+;   Recovery Data Delay Summary                        ; Not Found      ;
+;   Minimum Pulse Width Summary                        ; Pass           ;
+;   Max Skew Summary                                   ; Pass           ;
+;   Max Clock Skew Summary                             ; Not Found      ;
+;   Net Delay Summary                                  ; Pass           ;
+;   Metastability Summary                              ; Not Calculated ;
+;   Double Data Rate (DDR) Summary                     ; Fail           ;
+;   Transmitter Channel-to-Channel Skew (TCCS) Summary ; Not Found      ;
+;   Receiver Input Skew Margin (RSKM) Summary          ; Not Found      ;
+;   Design Assistant Summary                           ; High           ;
++------------------------------------------------------+----------------+
+
+

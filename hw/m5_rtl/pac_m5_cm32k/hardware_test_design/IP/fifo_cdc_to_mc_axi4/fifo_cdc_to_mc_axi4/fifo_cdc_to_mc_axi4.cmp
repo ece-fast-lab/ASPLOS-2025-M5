@@ -1,0 +1,13 @@
+	component fifo_cdc_to_mc_axi4 is
+		port (
+			data    : in  std_logic_vector(1023 downto 0) := (others => 'X'); -- datain
+			wrreq   : in  std_logic                       := 'X';             -- wrreq
+			rdreq   : in  std_logic                       := 'X';             -- rdreq
+			wrclk   : in  std_logic                       := 'X';             -- wrclk
+			rdclk   : in  std_logic                       := 'X';             -- rdclk
+			q       : out std_logic_vector(1023 downto 0);                    -- dataout
+			rdempty : out std_logic;                                          -- rdempty
+			wrfull  : out std_logic                                           -- wrfull
+		);
+	end component fifo_cdc_to_mc_axi4;
+

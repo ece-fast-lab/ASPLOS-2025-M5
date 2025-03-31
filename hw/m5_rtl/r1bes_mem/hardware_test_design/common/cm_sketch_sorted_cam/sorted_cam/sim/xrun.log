@@ -1,0 +1,80 @@
+xrun(64): 19.03-s009: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.03-s009: Started on May 17, 2024 at 15:43:15 KST
+xrun
+	-f xrun_arg
+		-access rwc
+		-64
+		-smartorder
+		-SV
+		-v93
+		-licqueue
+		-ALLOWREDEFINITION
+		-relax
+		-namemap_mixgen
+		+DISABLEGENCHK
+		-incdir ../header
+		-top cam_tb_random
+		-f filelist
+			/tools/Xilinx/Vivado/2020.2/data/verilog/src/glbl.v
+			../src/cam.sv
+			./cam_tb_random.sv
+		-incdir ../ip/axis_data_fifo/hdl
+		-y /tools/Xilinx/Vivado/2020.2/data/verilog/src/unisims
+		-cdslib /home/jhpark/workspace/vivado/compile_simlib/cds_unisims_ver.lib
+		-top glbl
+	-define WAVE
+	-define SIM
+	-define XILINX
+	+define+NUM_ENTRY=30
+xrun: *W,MLIBEXT: -y option was used without -libext flag.
+file: ./cam_tb_random.sv
+`define NUM_ENTRY 25
+                    |
+xmvlog: *W,MACNDF (./cam_tb_random.sv,4|20): The text macro 'NUM_ENTRY' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+      $fscanf(cnt_trace_file, "%d\n", input_cnt);
+            |
+xmvlog: *W,NOSYST (./cam_tb_random.sv,67|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+      $fscanf(addr_trace_file, "%d\n", input_addr);
+            |
+xmvlog: *W,NOSYST (./cam_tb_random.sv,68|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.cam_tb_random:sv
+		errors: 0, warnings: 2
+xmvlog: *W,LIBNOU: Library "/tools/Xilinx/Vivado/2020.2/data/verilog/src/unisims" given but not used.
+xmvlog: *W,SPDUSD: Include directory ../header given but not used.
+xmvlog: *W,SPDUSD: Include directory ../ip/axis_data_fifo/hdl given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 4
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		cam_tb_random
+		glbl
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.cam_tb_random:sv <0x5356c727>
+			streams:  13, words: 13216
+		worklib.cam_top:sv <0x3e833b25>
+			streams:  40, words: 50303
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Registers:              44      44
+		Scalar wires:           18       -
+		Vectored wires:          4       -
+		Always blocks:          67       9
+		Initial blocks:         16      16
+		Cont. assignments:       1       5
+		Pseudo assignments:      5       5
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.cam_tb_random:sv
+Loading snapshot worklib.cam_tb_random:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /tools/cadence/XCELIUM1903/tools/xcelium/files/xmsimrc
+xcelium> run
+Simulation complete via $finish(1) at time 17836383 PS + 0
+./cam_tb_random.sv:80       $finish;
+xcelium> exit
+TOOL:	xrun(64)	19.03-s009: Exiting on May 17, 2024 at 15:43:17 KST  (total: 00:00:02)

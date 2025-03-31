@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2024.03.27.13:47:50"
+ outputDirectory="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGIB027R29A1E2VR3"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_INCLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_INCLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_INCLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="inclk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="inclk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="clock_div1x" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="0" />
+   <property name="clockRateKnown" value="false" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clock_div1x" direction="output" role="clk" width="1" />
+  </interface>
+  <interface name="clock_div2x" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="0" />
+   <property name="clockRateKnown" value="false" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clock_div2x" direction="output" role="clk" width="1" />
+  </interface>
+  <interface name="clock_div4x" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="0" />
+   <property name="clockRateKnown" value="false" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clock_div4x" direction="output" role="clk" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="pll_0" version="1.0" name="pll_0">
+  <parameter name="AUTO_INCLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_INCLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGIB027R29A1E2VR3" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 7" />
+  <parameter name="AUTO_INCLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/synth/pll_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/synth/pll_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/research/v23.3/ip/altera/megafunctions/intelclkctrl/intelclkctrl_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="pll_0">"Generating: pll_0"</message>
+   <message level="Info" culprit="pll_0">"Generating: pll_0_intelclkctrl_200_wlyqxpa"</message>
+   <message level="Info" culprit="intelclkctrl_0">Generating top-level entity pll_0_intelclkctrl_200_wlyqxpa.</message>
+   <message level="Info" culprit="intelclkctrl_0">Verilog entity generation was successful</message>
+  </messages>
+ </entity>
+ <entity
+   kind="intelclkctrl"
+   version="2.0.0"
+   name="pll_0_intelclkctrl_200_wlyqxpa">
+  <parameter name="GLITCH_FREE_SWITCHOVER" value="true" />
+  <parameter name="NUM_CLOCKS" value="1" />
+  <parameter name="CLOCK_DIVIDER_OUTPUTS" value="3" />
+  <parameter name="device_family" value="Agilex 7" />
+  <parameter name="ENABLE_TYPE" value="2" />
+  <parameter name="ENABLE" value="false" />
+  <parameter name="ENABLE_REGISTER_TYPE" value="1" />
+  <parameter name="CLOCK_DIVIDER" value="true" />
+  <generatedFiles>
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/intelclkctrl_200/synth/pll_0_intelclkctrl_200_wlyqxpa.v"
+       attributes="" />
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/intelclkctrl_200/synth/pll_0_intelclkctrl_200_wlyqxpa_parameters.tcl"
+       attributes="" />
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/intelclkctrl_200/synth/pll_0_intelclkctrl_200_wlyqxpa.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/intelclkctrl_200/synth/pll_0_intelclkctrl_200_wlyqxpa.v"
+       attributes="" />
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/intelclkctrl_200/synth/pll_0_intelclkctrl_200_wlyqxpa_parameters.tcl"
+       attributes="" />
+   <file
+       path="/research/yans3/m5_impl_new/hardware_test_design/IP/pll/pll_0/intelclkctrl_200/synth/pll_0_intelclkctrl_200_wlyqxpa.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/research/v23.3/ip/altera/megafunctions/intelclkctrl/intelclkctrl_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="pll_0" as="intelclkctrl_0" />
+  <messages>
+   <message level="Info" culprit="pll_0">"Generating: pll_0_intelclkctrl_200_wlyqxpa"</message>
+   <message level="Info" culprit="intelclkctrl_0">Generating top-level entity pll_0_intelclkctrl_200_wlyqxpa.</message>
+   <message level="Info" culprit="intelclkctrl_0">Verilog entity generation was successful</message>
+  </messages>
+ </entity>
+</deploy>

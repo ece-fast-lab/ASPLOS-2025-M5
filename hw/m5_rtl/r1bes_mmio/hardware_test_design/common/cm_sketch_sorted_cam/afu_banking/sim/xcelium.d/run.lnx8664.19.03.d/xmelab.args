@@ -1,0 +1,29 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++define+W=8192
++define+NUM_HASH=4
++define+NUM_ENTRY=25
++define+NUM_INPUT=100
+-ACCESS
+rwc
+-V93
+-LICQUEUE
+-RELAX
+-NAMEMAP_MIXGEN
++DISABLEGENCHK
+-MESSAGES
+tb_afu_top_random
+glbl
+-XLMODE
+./xcelium.d/run.lnx8664.19.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.19.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.19.03.d/hdl.var
+-WORK
+worklib
+-IRUNHASTOP
+-HASXLMODE

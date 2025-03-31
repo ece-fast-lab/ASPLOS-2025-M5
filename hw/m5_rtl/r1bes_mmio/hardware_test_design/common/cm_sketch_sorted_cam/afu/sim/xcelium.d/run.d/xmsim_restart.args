@@ -1,0 +1,28 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++define+W=64
++define+NUM_HASH=4
++define+NUM_ENTRY=25
++define+NUM_INPUT=100
+-LICQUEUE
+-MESSAGES
++EMGRLOG
+xrun.log
+-XLSTIME
+1716397230
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.19.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.19.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.19.03.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	19.03-s009"
+-XLNAME
+./xcelium.d/run.lnx8664.19.03.d/eda01_3901494

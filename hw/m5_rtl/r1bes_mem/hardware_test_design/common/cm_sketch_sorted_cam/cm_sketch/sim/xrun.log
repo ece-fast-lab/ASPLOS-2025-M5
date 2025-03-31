@@ -1,0 +1,100 @@
+xrun(64): 19.03-s009: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.03-s009: Started on May 21, 2024 at 15:42:35 KST
+xrun
+	-f xrun_arg
+		-access rwc
+		-64
+		-smartorder
+		-SV
+		-v93
+		-licqueue
+		-ALLOWREDEFINITION
+		-relax
+		-namemap_mixgen
+		+DISABLEGENCHK
+		-incdir ../header
+		-top cm_sketch_tb_random
+		-f filelist
+			/tools/Xilinx/Vivado/2020.2/data/verilog/src/glbl.v
+			../src/hash_computation.sv
+			../src/sketch.sv
+			../src/min_computation.sv
+			../src/cm_sketch_top.sv
+			../src/one_hash_computation.sv
+			./cm_sketch_tb_random.sv
+		-incdir ../ip/axis_data_fifo/hdl
+		-y /tools/Xilinx/Vivado/2020.2/data/verilog/src/unisims
+		-cdslib /home/jhpark/workspace/vivado/compile_simlib/cds_unisims_ver.lib
+		-top glbl
+	-define WAVE
+	-define SIM
+	-define XILINX
+xrun: *W,MLIBEXT: -y option was used without -libext flag.
+file: ../src/min_computation.sv
+      addr_stage[0] <= {ADDR_SIZE{1'b0}};
+               |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,44|15): 'addr_stage': undeclared identifier [12.5(IEEE)].
+      addr_stage[0] <= input_addr;
+               |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,48|15): 'addr_stage': undeclared identifier [12.5(IEEE)].
+      addr_stage[0] <= {ADDR_SIZE{1'b0}};
+               |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,52|15): 'addr_stage': undeclared identifier [12.5(IEEE)].
+          min_cnt_stage[0][i] <= {CNT_SIZE{1'b0}};
+                      |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,62|22): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+          min_cnt_stage[0][i] <= input_cnt_array[i];
+                      |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,65|22): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+          min_cnt_stage[0][i] <= {CNT_SIZE{1'b0}};
+                      |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,68|22): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+          addr_stage[i] <= {ADDR_SIZE{1'b0}};
+                   |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,79|19): 'addr_stage': undeclared identifier [12.5(IEEE)].
+          addr_stage[i] <= addr_stage[i-1];
+                   |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,83|19): 'addr_stage': undeclared identifier [12.5(IEEE)].
+          addr_stage[i] <= addr_stage[i-1];
+                                    |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,83|36): 'addr_stage': undeclared identifier [12.5(IEEE)].
+            min_cnt_stage[i][j] <= {CNT_SIZE{1'b0}};
+                        |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,96|24): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+            min_cnt_stage[i][j] <= (min_cnt_stage[i-1][j*2] >= min_cnt_stage[i-1][j*2+1]) ? min_cnt_stage[i-1][j*2+1] : min_cnt_stage[i-1][j*2];
+                        |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,99|24): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+            min_cnt_stage[i][j] <= (min_cnt_stage[i-1][j*2] >= min_cnt_stage[i-1][j*2+1]) ? min_cnt_stage[i-1][j*2+1] : min_cnt_stage[i-1][j*2];
+                                                |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,99|48): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+            min_cnt_stage[i][j] <= (min_cnt_stage[i-1][j*2] >= min_cnt_stage[i-1][j*2+1]) ? min_cnt_stage[i-1][j*2+1] : min_cnt_stage[i-1][j*2];
+                                                                           |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,99|75): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+            min_cnt_stage[i][j] <= (min_cnt_stage[i-1][j*2] >= min_cnt_stage[i-1][j*2+1]) ? min_cnt_stage[i-1][j*2+1] : min_cnt_stage[i-1][j*2];
+                                                                                                        |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,99|104): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+            min_cnt_stage[i][j] <= (min_cnt_stage[i-1][j*2] >= min_cnt_stage[i-1][j*2+1]) ? min_cnt_stage[i-1][j*2+1] : min_cnt_stage[i-1][j*2];
+                                                                                                                                    |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,99|132): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+  assign min_addr   = addr_stage[NUM_STAGE];
+                               |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,107|31): 'addr_stage': undeclared identifier [12.5(IEEE)].
+  assign min_cnt    = min_cnt_stage[NUM_STAGE][0];
+                                  |
+xmvlog: *E,UNDIDN (../src/min_computation.sv,108|34): 'min_cnt_stage': undeclared identifier [12.5(IEEE)].
+	module worklib.min_computation:sv
+		errors: 17, warnings: 0
+file: ../src/one_hash_computation.sv
+    $random;
+          |
+xmvlog: *W,NOSYST (../src/one_hash_computation.sv,35|10): System function '$random' invoked as a task. Return value will be ignored.
+file: ./cm_sketch_tb_random.sv
+      $fscanf(trace_file, "%d\n", input_addr);
+            |
+xmvlog: *W,NOSYST (./cm_sketch_tb_random.sv,78|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+xmvlog: *W,SPDUSD: Include directory ../header given but not used.
+xmvlog: *W,SPDUSD: Include directory ../ip/axis_data_fifo/hdl given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	19.03-s009: Exiting on May 21, 2024 at 15:42:35 KST  (total: 00:00:00)

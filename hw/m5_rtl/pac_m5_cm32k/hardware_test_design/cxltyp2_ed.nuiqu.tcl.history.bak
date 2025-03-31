@@ -1,0 +1,11 @@
+# TCL commands history
+# Thu Jan 23 17:01:06 2025
+dni::selection -action set -object {net::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|page_mig_addr_en}
+dni::selection -action set -object {net_bus::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|csr_ofw_buf_vld_cnt}
+dni::selection -action set -object {net::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|gnd}
+dni::selection -action set -object {net_bus::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|h_cache_addr_i}
+dni::selection -action set -object {instance::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|h_cache_buffer_inst}
+dni::selection -action set -object {instance::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|h_cache_buffer_inst}
+dni::selection -action set -object {net::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|h_cache_buffer_inst|rd_en}
+dni::selection -action set -object {net_bus::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|h_cache_buffer_inst|cache_addr_o}
+dni::selection -action set -object {net::cxltyp2_ed::ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|h_cache_buffer_inst|wr_overflow}
