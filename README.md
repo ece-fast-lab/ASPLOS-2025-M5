@@ -1,6 +1,5 @@
-M5: Mastering Page Migration and Memory Management for CXL-based Tiered Memory Systems
-# Overview
-
+# M5: Mastering Page Migration and Memory Management for CXL-based Tiered Memory Systems
+## Overview 
 * List of experiments to reproduce:
   * Performance comparison with ANB (Figure 9)
   * Agilex7-based average access-count ratios of HPT (Figure 8)
@@ -14,9 +13,9 @@ M5: Mastering Page Migration and Memory Management for CXL-based Tiered Memory S
 * Results
     * The results are divided into 20t (GAPBs and Liblinear), and 8t (SPEC2017), and 1t Redis.
 
-# Testbed Specification
+## Testbed Specification
 
-## Hardware
+### Hardware
 | Hardware | Description |
 | -------- | ----------- |
 | CPU | 2x Intel Xeon 6430 CPU |
@@ -24,8 +23,8 @@ M5: Mastering Page Migration and Memory Management for CXL-based Tiered Memory S
 | FPGA | Intel Agilex 7 I-series FPGA, rev. R1BES |
 
 
-# Installation
-## Hardware
+## Installation
+### Hardware
 Please refer to the [hardware readme](./hw/README.md) for setting up the FPGA.
 
 ## Kernels
@@ -35,10 +34,10 @@ Please refer to the [hardware readme](./hw/README.md) for setting up the FPGA.
 
 Please refer to the [kernel readme](./kernels/README.md) for setting up the Linux kernels.
 
-## Software
+### Software
 Please refer to the [software readme](./software/README.md) for setting up the software.
 
-## Experiments
+### Experiments
 Please refer to the [experiments readme](./testing_scripts//README.md) for running the experiments.
 
 # [Publication]()
