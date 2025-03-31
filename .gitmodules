@@ -1,3 +1,6 @@
 [submodule "sw/pcimem"]
 	path = sw/pcimem
 	url = https://github.com/ynnsau/pcimem
+[submodule "sw/damo"]
+	path = sw/damo
+	url = https://github.com/ynnsau/damo
