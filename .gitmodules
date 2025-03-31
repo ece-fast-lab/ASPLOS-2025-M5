@@ -1,0 +1,3 @@
+[submodule "sw/pcimem"]
+	path = sw/pcimem
+	url = https://github.com/ynnsau/pcimem
