@@ -1,0 +1,65 @@
+- Test --numa_node 0 case
+- Implement histogram stat regions output
+- damo show features implementation
+  - support target damos filter
+  - time based filtering
+  - collapse by time
+  - collapse by priority value (more histogram control)
+    - --histogram hotness?
+  - Implement min/max snapshot format keyword
+- damo reclaim: add a command for basic investigation
+  - helps ensure DAMON_RECLAIM is working as expected
+  - helps reporting issue
+- Handle _damon_sysfs file i/o error for unsupported kernel features and
+  conflicts with concurrent ones
+- Optimize 'replay' performance
+  - An approach for 2 MiB-granularity page management didn't show improvement
+  - Optionally use C program like 'masim'
+- Let 'replay' further parse vmas and alloc/release memory
+- Unify wss and footprints report types
+- Fixup 'damo show' on schemes_tried_regions unsupported kernels
+  - Either make the warning clear, or support it using trace points
+  - (https://github.com/awslabs/damo/issues/101)
+- 'diagnose' command
+  - check if nr_regions in bound
+  - check if DAMOS quota is in control
+- 'damo monitor'
+  - add option to add snapshot as (optional) alternate of heatmap
+- Show temperature histogram on holistic report
+- status: Show kdamond cpu usage
+- heatmap: Support interactive zoom in/out/scrolling
+- extend/unify common workflow commands
+  - args: Format complext command arguments like DAMON parameters in json and
+    snapshot formatter
+  - extend record/report, deprecate show and status.
+    - extend record for snapshot capturing (done: --snapshot)
+      - damo record --snapshot <delay> <count> (done)
+    - extend report to do record
+      - damo report --input record <deductible target> <timeout>
+      - damo report --input snapshot <delay> <count>
+      - If --input is not given, and a kdamond is running, snapshot once
+      - If --input is not given, no kdamond is running, use damon.data if
+        exists
+    - allow report repeating
+    - deprecate monitor
+- Record DAMON status
+- Report DAMON status
+- Deprecate 'damo status'
+- Implement single report formatter
+  - Extend 'report access' format arguments for wss, memfootprint, etc
+- Provide virtual memory mapping information
+  - shows when what virtual address has mappend and unmapped
+
+- Deprecate old features
+  - Deprecate fmt_json in favor of 'args damon'
+    - notified as will-be-deprecated by 2024-11
+  - Deprecate heats report type in favor of heatmap report type
+  - Deprecate translate_damos (done.)
+  - Deprecate single line per-scheme (done.  code moved to _damon_deprecated)
+  - Deprecate v1-v3 schemes (done.  necessary code moved to _damon_deprecated)
+  - Deprecate python2 support (done.  code moved to _damon_deprecated)
+  - Deprecate scheme subcommand
+    - Can be replaced by start or tune
+  - Deprecate old scheme usages in tests
+  - Deprecate DAMON results record binary format (done.  code moved to
+    _damon_deprecated)

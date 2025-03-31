@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -Wextra -march=native -O2 CMakeFiles/m5_manager.dir/src/util.cpp.o CMakeFiles/m5_manager.dir/src/csr.cpp.o CMakeFiles/m5_manager.dir/src/worker.cpp.o CMakeFiles/m5_manager.dir/src/algo.cpp.o CMakeFiles/m5_manager.dir/src/main.cpp.o -o m5_manager  -lnuma -lpthread 

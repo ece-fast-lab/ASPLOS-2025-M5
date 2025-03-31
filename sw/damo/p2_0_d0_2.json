@@ -1,0 +1,188 @@
+{
+  "kdamonds": [
+    {
+      "state": null,
+      "pid": null,
+      "contexts": [
+        {
+          "ops": "paddr",
+          "targets": [
+            {
+              "pid": null,
+              "regions": [
+                {
+                  "start": "4,096",
+                  "end": "253,952"
+                },
+                {
+                  "start": "258,048",
+                  "end": "655,360"
+                },
+                {
+                  "start": "1,048,576",
+                  "end": "1,532,887,040"
+                },
+                {
+                  "start": "1,532,891,136",
+                  "end": "1,711,415,296"
+                },
+                {
+                  "start": "1,713,778,688",
+                  "end": "1,832,132,608"
+                },
+                {
+                  "start": "2,004,873,216",
+                  "end": "2,004,877,312"
+                },
+                {
+                  "start": "4,714,397,696",
+                  "end": "6,442,450,944"
+                },
+                {
+                  "start": "68,719,476,736",
+                  "end": "70,866,960,384"
+                }
+              ]
+            }
+          ],
+          "intervals": {
+            "sample_us": "100 ms",
+            "aggr_us": "2 s",
+            "ops_update_us": "20 s"
+          },
+          "nr_regions": {
+            "min": "100",
+            "max": "10,000"
+          },
+          "schemes": [
+            {
+              "action": "migrate_cold",
+              "target_nid": 2,
+              "access_pattern": {
+                "sz_bytes": {
+                  "min": "4.000 KiB",
+                  "max": "max"
+                },
+                "nr_accesses": {
+                  "min": "0 %",
+                  "max": "0 %"
+                },
+                "age": {
+                  "min": "30 s",
+                  "max": "max"
+                }
+              },
+              "apply_interval_us": 0,
+              "quotas": {
+                "time_ms": "1 s",
+                "sz_bytes": "50.000 GiB",
+                "reset_interval_ms": "20 s",
+                "goals": [],
+                "effective_sz_bytes": "0 B",
+                "weights": {
+                  "sz_permil": "0 %",
+                  "nr_accesses_permil": "0 %",
+                  "age_permil": "1 %"
+                }
+              },
+              "watermarks": {
+                "metric": "none",
+                "interval_us": "0 ns",
+                "high_permil": "0 %",
+                "mid_permil": "0 %",
+                "low_permil": "0 %"
+              },
+              "filters": [
+                {
+                  "filter_type": "young",
+                  "matching": true,
+                  "memcg_path": null,
+                  "address_range": null,
+                  "damon_target_idx": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": null,
+      "pid": null,
+      "contexts": [
+        {
+          "ops": "paddr",
+          "targets": [
+            {
+              "pid": null,
+              "regions": [
+                {
+                  "start": "139,586,437,120",
+                  "end": "148,176,371,712"
+                }
+              ]
+            }
+          ],
+          "intervals": {
+            "sample_us": "100 ms",
+            "aggr_us": "2 s",
+            "ops_update_us": "20 s"
+          },
+          "nr_regions": {
+            "min": "100",
+            "max": "10,000"
+          },
+          "schemes": [
+            {
+              "action": "migrate_hot",
+              "target_nid": 0,
+              "access_pattern": {
+                "sz_bytes": {
+                  "min": "4.000 KiB",
+                  "max": "max"
+                },
+                "nr_accesses": {
+                  "min": "5 %",
+                  "max": "100 %"
+                },
+                "age": {
+                  "min": "0 ns",
+                  "max": "max"
+                }
+              },
+              "apply_interval_us": 0,
+              "quotas": {
+                "time_ms": "2 s",
+                "sz_bytes": "50.000 GiB",
+                "reset_interval_ms": "20 s",
+                "goals": [],
+                "effective_sz_bytes": "0 B",
+                "weights": {
+                  "sz_permil": "0 %",
+                  "nr_accesses_permil": "0 %",
+                  "age_permil": "1 %"
+                }
+              },
+              "watermarks": {
+                "metric": "none",
+                "interval_us": "0 ns",
+                "high_permil": "0 %",
+                "mid_permil": "0 %",
+                "low_permil": "0 %"
+              },
+              "filters": [
+                {
+                  "filter_type": "young",
+                  "matching": false,
+                  "memcg_path": null,
+                  "address_range": null,
+                  "damon_target_idx": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
