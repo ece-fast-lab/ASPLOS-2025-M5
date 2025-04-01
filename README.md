@@ -27,7 +27,7 @@
 ### Hardware
 Please refer to the [hardware readme](./hw/README.md) for setting up the FPGA.
 
-## Kernels
+### Kernels
 * M5 -- Linux kernel v6.5
 * ANB -- Linux kernel v5.19
 * DAMON -- Linux kernel v6.11
@@ -37,7 +37,7 @@ Please refer to the [kernel readme](./kernels/README.md) for setting up the Linu
 ### Software
 Please refer to the [software readme](./software/README.md) for setting up the software.
 
-### Experiments
+## Experiments
 Please refer to the [experiments readme](./testing_scripts//README.md) for running the experiments.
 
 # [Publication]()

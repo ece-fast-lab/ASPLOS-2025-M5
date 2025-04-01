@@ -4,7 +4,7 @@
 The general usage of the M5 manager is linked [here](./m5_manager_uspace/README.md).
 To build the M5 manager:
 ```
-cd ./m5_manager_userspace
+cd ./m5_manager_uspace
 mkdir build
 cd build
 cmake ..
@@ -12,6 +12,13 @@ make -j
 # The binary is `m5_manager`
 ```
 * The corresponding hardware design for the HPT is under `../hw/m5_rtl/r1bes_mmio/`
+
+### Modified Intel PCM
+A modified version of Intel PCM is included under `./cxl-hint-fault-pcm/` which has the following features:
+1. Reduce monitoring overhead by only monitoring the bandwidth.
+2. Using a share-memory to communicate with the M5 manager.
+
+The path `PCM_MEMORY_REDUCED_PATH` in `./m5_manager_uspace/src/worker.cpp` should be updated to the path of this compiled binary.
 
 ## M5 manager latency optimized
 To further reduce the overhead of M5 manager, some components are further optimized:
@@ -46,7 +53,7 @@ The PAC tracks the page access count in FPGA with SRAM. For the SRAM entry that 
 
 To compile the PAC userspace binary:
 ```
-cd ./m5_manager_userspace
+cd ./pac_ofw_uspace/
 mkdir build
 cd build
 cmake ..
